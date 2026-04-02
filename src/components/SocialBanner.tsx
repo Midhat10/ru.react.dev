@@ -7,18 +7,19 @@ import {useRef, useEffect} from 'react';
 import cn from 'classnames';
 import {ExternalLink} from './ExternalLink';
 
-const bannerText = 'Join us for React Conf on Oct 7-8.';
+// Перелагаем призыв на исконный язык
+const bannerText = 'Присоединяйся к Вече Расписывателя 7–8 октября.';
 const bannerLink = 'https://conf.react.dev/';
-const bannerLinkText = 'Learn more.';
+const bannerLinkText = 'Узнать больше.';
 
 export default function SocialBanner() {
   const ref = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     function patchedScrollTo(x: number, y: number) {
       if (y === 0) {
-        // We're trying to reset scroll.
-        // If we already scrolled past the banner, consider it as y = 0.
-        const bannerHeight = ref.current?.offsetHeight ?? 0; // Could be zero (e.g. mobile)
+        // Пытаемся сбросить прокрутку.
+        // Если уже пролистали клич, считаем за y = 0.
+        const bannerHeight = ref.current?.offsetHeight ?? 0;
         y = Math.min(window.scrollY, bannerHeight);
       }
       return realScrollTo(x, y);

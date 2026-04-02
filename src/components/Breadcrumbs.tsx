@@ -8,7 +8,7 @@ import type {RouteItem} from 'components/Layout/getRouteMeta';
 
 function Breadcrumbs({breadcrumbs}: {breadcrumbs: RouteItem[]}) {
   return (
-    <div className="flex flex-wrap">
+    <nav aria-label="Путь по граду поучений" className="flex flex-wrap">
       {breadcrumbs.map(
         (crumb, i) =>
           crumb.path &&
@@ -37,7 +37,7 @@ function Breadcrumbs({breadcrumbs}: {breadcrumbs: RouteItem[]}) {
             </div>
           )
       )}
-    </div>
+    </nav>
   );
 }
 

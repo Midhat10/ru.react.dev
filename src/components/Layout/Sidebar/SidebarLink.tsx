@@ -73,25 +73,24 @@ export function SidebarLink({
             isPending,
         }
       )}>
-      {/* This here needs to be refactored ofc */}
       <div>
         {title}{' '}
         {version === 'major' && (
           <span
-            title="- This feature is available in React 19 beta and the React canary channel"
+            title="— Сие умение доступно в Расписывателе 19 и его Певчем русле"
             className={`text-xs px-1 ms-1 rounded bg-gray-10 dark:bg-gray-40 dark:bg-opacity-20 text-gray-40 dark:text-gray-40`}>
-            React 19
+            Расписыватель 19
           </span>
         )}
         {version === 'canary' && (
           <IconCanary
-            title=" - This feature is available in the latest Canary version of React"
+            title=" — Сие умение доступно в свежем Певчем изводе Расписывателя"
             className="ms-1 text-gray-30 dark:text-gray-60 inline-block w-3.5 h-3.5 align-[-3px]"
           />
         )}
         {version === 'experimental' && (
           <IconExperimental
-            title=" - This feature is available in the latest Experimental version of React"
+            title=" — Сие умение доступно в свежем Опытном изводе Расписывателя"
             className="ms-1 text-gray-30 dark:text-gray-60 inline-block w-3.5 h-3.5 align-[-3px]"
           />
         )}

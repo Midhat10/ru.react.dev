@@ -1,5 +1,5 @@
 {
-  "title": "API Reference",
+  "title": "Указы Расписывателя",
   "path": "/reference/react",
   "routes": [
     {
@@ -7,11 +7,11 @@
       "sectionHeader": "react@{{version}}"
     },
     {
-      "title": "Overview",
+      "title": "Обзор",
       "path": "/reference/react"
     },
     {
-      "title": "Hooks",
+      "title": "Подключения (Hooks)",
       "path": "/reference/react/hooks",
       "routes": [
         {
@@ -85,23 +85,23 @@
       ]
     },
     {
-      "title": "Components",
+      "title": "Составные части",
       "path": "/reference/react/components",
       "routes": [
         {
-          "title": "<Fragment> (<>)",
+          "title": "Зерно (<Fragment>)",
           "path": "/reference/react/Fragment"
         },
         {
-          "title": "<Profiler>",
+          "title": "Мерятель (<Profiler>)",
           "path": "/reference/react/Profiler"
         },
         {
-          "title": "<StrictMode>",
+          "title": "Строгий устав (<StrictMode>)",
           "path": "/reference/react/StrictMode"
         },
         {
-          "title": "<Suspense>",
+          "title": "Ожидание (<Suspense>)",
           "path": "/reference/react/Suspense"
         },
         {
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "title": "APIs",
+      "title": "Дела (APIs)",
       "path": "/reference/react/apis",
       "routes": [
         {
@@ -127,7 +127,8 @@
         {
           "title": "cache",
           "path": "/reference/react/cache"
-        },        {
+        },
+        {
           "title": "captureOwnerStack",
           "path": "/reference/react/captureOwnerStack"
         },
@@ -173,7 +174,7 @@
       "sectionHeader": "react-dom@{{version}}"
     },
     {
-      "title": "Hooks",
+      "title": "Подключения",
       "path": "/reference/react-dom/hooks",
       "routes": [
         {
@@ -183,7 +184,7 @@
       ]
     },
     {
-      "title": "Components",
+      "title": "Составные части",
       "path": "/reference/react-dom/components",
       "routes": [
         {

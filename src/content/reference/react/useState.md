@@ -4,7 +4,7 @@ title: useState
 
 <Intro>
 
-`useState` is a React Hook that lets you add a [state variable](/learn/state-a-components-memory) to your component.
+`useState` — это **Подключение** Расписывателя, которое дозволяет тебе наделить свою [составную часть](/learn/state-a-components-memory) **состоянием** (переменной памятью).
 
 ```js
 const [state, setState] = useState(initialState)
@@ -16,11 +16,12 @@ const [state, setState] = useState(initialState)
 
 ---
 
-## Reference {/*reference*/}
+## Толкование {/*reference*/}
 
 ### `useState(initialState)` {/*usestate*/}
 
-Call `useState` at the top level of your component to declare a [state variable.](/learn/state-a-components-memory)
+Зови `useState` в самом зачине своей составной части, дабы завести **хранимку** [для её вестей.](/learn/state-a-components-memory)
+
 
 ```js
 import { useState } from 'react';
@@ -32,32 +33,33 @@ function MyComponent() {
   // ...
 ```
 
-The convention is to name state variables like `[something, setSomething]` using [array destructuring.](https://javascript.info/destructuring-assignment)
+Обычай велит давать имена **хранимкам** по образу `[something, setSomething]`, используя [расплетание ряда.](https://javascript.info)
 
-[See more examples below.](#usage)
+[Гляди примеры ниже.](#usage)
 
-#### Parameters {/*parameters*/}
+#### Доводы {/*parameters*/}
 
-* `initialState`: The value you want the state to be initially. It can be a value of any type, but there is a special behavior for functions. This argument is ignored after the initial render.
-  * If you pass a function as `initialState`, it will be treated as an _initializer function_. It should be pure, should take no arguments, and should return a value of any type. React will call your initializer function when initializing the component, and store its return value as the initial state. [See an example below.](#avoiding-recreating-the-initial-state)
+* `initialState`: Значение, которое ты хочешь заложить в **хранимку** изначально. Оно может быть любого рода, но для дел (функций) есть особый нрав. Этот довод будет оставлен без внимания после первой отрисовки.
+  * Если ты передашь дело как `initialState`, оно будет считаться _зачинающим делом_. Оно должно быть чистым, не принимать доводов и возвращать значение любого рода. Расписыватель позовёт твоё зачинающее дело при созидании составной части и упрячет его исход как зачин **хранимки**. [Гляди пример ниже.](#avoiding-recreating-the-initial-state)
 
-#### Returns {/*returns*/}
+#### Исход {/*returns*/}
 
-`useState` returns an array with exactly two values:
+`useState` возвращает ряд ровно из двух значений:
 
-1. The current state. During the first render, it will match the `initialState` you have passed.
-2. The [`set` function](#setstate) that lets you update the state to a different value and trigger a re-render.
+1. Нынешнее состояние **хранимки**. При первой отрисовке оно будет ладить с тем `initialState`, что ты передал.
+2. [`set` function](#setstate) (дело-правильщик), которое дозволяет тебе обновить **хранимку** до иного значения и побудить к **перерисовке**.
 
-#### Caveats {/*caveats*/}
+#### Предостережения {/*caveats*/}
 
-* `useState` is a Hook, so you can only call it **at the top level of your component** or your own Hooks. You can't call it inside loops or conditions. If you need that, extract a new component and move the state into it.
-* In Strict Mode, React will **call your initializer function twice** in order to [help you find accidental impurities.](#my-initializer-or-updater-function-runs-twice) This is development-only behavior and does not affect production. If your initializer function is pure (as it should be), this should not affect the behavior. The result from one of the calls will be ignored.
+* `useState` — это **Подключение**, посему ты можешь звать его только **в самом зачине своей составной части** или в своих собственных Подключениях. Ты не можешь звать его внутри кругов (циклов) или условий. Если тебе это надобно — выдели новую часть и перенеси **хранимку** в неё.
+* В **Строгом уставе** Расписыватель **позовёт твоё зачинающее дело дважды**, дабы [помочь тебе сыскать случайную нечистоту в уставе.](#my-initializer-or-updater-function-runs-twice) Сие творится лишь при созидании и не влияет на **живое дело**. Если твоё дело чистое (каким ему и подобает быть), это не сдвинет смысл работы. Исход одного из призывов будет отброшен.
 
 ---
 
-### `set` functions, like `setSomething(nextState)` {/*setstate*/}
+### `set` functions, вроде `setSomething(nextState)` {/*setstate*/}
 
-The `set` function returned by `useState` lets you update the state to a different value and trigger a re-render. You can pass the next state directly, or a function that calculates it from the previous state:
+Дело-правильщик `set`, возвращаемое `useState`, дозволяет тебе обновить **хранимку** до иного значения и побудить к **перерисовке**. Ты можешь передать новую хранимку прямо или через дело, которое высчитает его на основе прошлого:
+
 
 ```js
 const [name, setName] = useState('Edward');
@@ -66,38 +68,40 @@ function handleClick() {
   setName('Taylor');
   setAge(a => a + 1);
   // ...
+  }
 ```
 
-#### Parameters {/*setstate-parameters*/}
+#### Доводы {/*setstate-parameters*/}
 
-* `nextState`: The value that you want the state to be. It can be a value of any type, but there is a special behavior for functions.
-  * If you pass a function as `nextState`, it will be treated as an _updater function_. It must be pure, should take the pending state as its only argument, and should return the next state. React will put your updater function in a queue and re-render your component. During the next render, React will calculate the next state by applying all of the queued updaters to the previous state. [See an example below.](#updating-state-based-on-the-previous-state)
+* `nextState`: Значение, которое ты хочешь заложить в **хранимку**. Оно может быть любого рода, но для дел есть особый нрав.
+  * Если ты передашь дело как `nextState`, оно будет считаться _обновляющим делом_. Оно должно быть чистым, принимать лишь один довод (ожидающее состояние) и возвращать следующее состояние. Расписыватель поставит твоё обновляющее дело в очередь и наметит **перерисовку** части. Во время следующей отрисовки Расписыватель высчитает новое состояние, применив все накопленные в очереди дела к прошлому значению. [Гляди пример ниже.](#updating-state-based-on-the-previous-state)
 
-#### Returns {/*setstate-returns*/}
+#### Исход {/*setstate-returns*/}
 
-`set` functions do not have a return value.
+Дела `set` не возвращают никакого значения.
 
-#### Caveats {/*setstate-caveats*/}
+#### Предостережения {/*setstate-caveats*/}
 
-* The `set` function **only updates the state variable for the *next* render**. If you read the state variable after calling the `set` function, [you will still get the old value](#ive-updated-the-state-but-logging-gives-me-the-old-value) that was on the screen before your call.
+* Дело `set` **обновляет хранимку только для *следующей* отрисовки**. Если ты попытаешься прочесть значение из **хранимки** тотчас после призыва `set`, [ты всё ещё получишь старое значение](#ive-updated-the-state-but-logging-gives-me-the-old-value), которое было на экране до твоего призыва.
 
-* If the new value you provide is identical to the current `state`, as determined by an [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) comparison, React will **skip re-rendering the component and its children.** This is an optimization. Although in some cases React may still need to call your component before skipping the children, it shouldn't affect your code.
+* Если новое значение, коие ты даёшь, тождественно нынешнему (что проверяется через сличение [`Object.is`](https://mozilla.org)), Расписыватель **пропустит перерисовку части и всех её чад.** Сие нужно для сбережения мощи. Хотя в иных случаях Расписыватель всё же может позвать твою часть перед тем, как пропустить чад, на твой устав это влиять не должно.
 
-* React [batches state updates.](/learn/queueing-a-series-of-state-updates) It updates the screen **after all the event handlers have run** and have called their `set` functions. This prevents multiple re-renders during a single event. In the rare case that you need to force React to update the screen earlier, for example to access the DOM, you can use [`flushSync`.](/reference/react-dom/flushSync)
+* Расписыватель [собирает правки состояния в пучки.](/learn/queueing-a-series-of-state-updates) Он обновляет экран **после того, как отработают все распорядители деяний** и позовут свои дела `set`. Это упреждает множественные перерисовки во время одного деяния. В редких случаях, когда тебе нужно заставить Расписыватель обновить экран раньше (например, для доступа к узлам разметки), можно использовать [`flushSync`.](/reference/react-dom/flushSync)
 
-* The `set` function has a stable identity, so you will often see it omitted from Effect dependencies, but including it will not cause the Effect to fire. If the linter lets you omit a dependency without errors, it is safe to do. [Learn more about removing Effect dependencies.](/learn/removing-effect-dependencies#move-dynamic-objects-and-functions-inside-your-effect)
+* У дела `set` стойкое имя (identity), посему ты часто будешь видеть, что его не вписывают в нужды (зависимости) **Воздействий**, но его наличие там не заставит **Воздействие** срабатывать лишний раз. Если **поверщик** (линтер) дозволяет опустить нужду без погрешностей, значит, сие безопасно. [Узнай больше об изъятии нужд из Воздействий.](/learn/removing-effect-dependencies#move-dynamic-objects-and-functions-inside-your-effect)
 
-* Calling the `set` function *during rendering* is only allowed from within the currently rendering component. React will discard its output and immediately attempt to render it again with the new state. This pattern is rarely needed, but you can use it to **store information from the previous renders**. [See an example below.](#storing-information-from-previous-renders)
+* Звать дело `set` *во время отрисовки* дозволено только внутри той части, что отрисовывается прямо сейчас. Расписыватель отбросит её исход и тотчас попытается отрисовать её снова с новым состоянием. Такой узор письма нужен редко, но его можно использовать, дабы **беречь вести из прошлых отрисовок**. [Гляди пример ниже.](#storing-information-from-previous-renders)
 
-* In Strict Mode, React will **call your updater function twice** in order to [help you find accidental impurities.](#my-initializer-or-updater-function-runs-twice) This is development-only behavior and does not affect production. If your updater function is pure (as it should be), this should not affect the behavior. The result from one of the calls will be ignored.
+* В **Строгом уставе** Расписыватель **позовёт твоё обновляющее дело дважды**, дабы [помочь тебе сыскать случайную нечистоту в уставе.](#my-initializer-or-updater-function-runs-twice) Сие творится лишь при созидании. Если твоё дело чистое, это не сдвинет смысл работы. Исход одного из призывов будет отброшен.
 
 ---
 
-## Usage {/*usage*/}
+## Употребление {/*usage*/}
 
-### Adding state to a component {/*adding-state-to-a-component*/}
+### Наделение части хранимкой {/*adding-state-to-a-component*/}
 
-Call `useState` at the top level of your component to declare one or more [state variables.](/learn/state-a-components-memory)
+Зови `useState` в самом зачине своей составной части, дабы объявить одну или несколько [хранимок.](/learn/state-a-components-memory)
+
 
 ```js [[1, 4, "age"], [2, 4, "setAge"], [3, 4, "42"], [1, 5, "name"], [2, 5, "setName"], [3, 5, "'Taylor'"]]
 import { useState } from 'react';
@@ -106,16 +110,18 @@ function MyComponent() {
   const [age, setAge] = useState(42);
   const [name, setName] = useState('Taylor');
   // ...
+  }
 ```
 
-The convention is to name state variables like `[something, setSomething]` using [array destructuring.](https://javascript.info/destructuring-assignment)
+Обычай велит давать имена **хранимкам** по образу `[something, setSomething]`, используя [расплетание ряда.](https://javascript.info)
 
-`useState` returns an array with exactly two items:
+`useState` возвращает ряд ровно из двух звеньев:
 
-1. The <CodeStep step={1}>current state</CodeStep> of this state variable, initially set to the <CodeStep step={3}>initial state</CodeStep> you provided.
-2. The <CodeStep step={2}>`set` function</CodeStep> that lets you change it to any other value in response to interaction.
+1. <CodeStep step={1}>Нынешнее состояние</CodeStep> этой **хранимки**, изначально равное тому <CodeStep step={3}>зачину</CodeStep>, что ты предоставил.
+2. <CodeStep step={2}>`set` function</CodeStep> (дело-правильщик), которое дозволяет тебе сменить его на любое иное значение в ответ на волеизъявление.
 
-To update what’s on the screen, call the `set` function with some next state:
+Чтобы обновить то, что начертано на экране, позови дело `set` с новым состоянием:
+
 
 ```js [[2, 2, "setName"]]
 function handleClick() {
@@ -123,11 +129,13 @@ function handleClick() {
 }
 ```
 
-React will store the next state, render your component again with the new values, and update the UI.
+**Расписыватель** упрячет следующее значение в память, отрисует твою составную часть снова с новыми значениями и обновит лик программы.
 
 <Pitfall>
 
-Calling the `set` function [**does not** change the current state in the already executing code](#ive-updated-the-state-but-logging-gives-me-the-old-value):
+Призыв дела `set` [**не меняет** нынешнюю **хранимку** в уже выполняемом уставе](#ive-updated-the-state-but-logging-gives-me-the-old-value):
+
+
 
 ```js {3}
 function handleClick() {
@@ -136,15 +144,15 @@ function handleClick() {
 }
 ```
 
-It only affects what `useState` will return starting from the *next* render.
+Сие влияет лишь на то, что `useState` вернёт тебе, начиная со *следующей* отрисовки.
 
 </Pitfall>
 
 <Recipes titleText="Basic useState examples" titleId="examples-basic">
 
-#### Counter (number) {/*counter-number*/}
+#### Счётчик (число) {/*counter-number*/}
 
-In this example, the `count` state variable holds a number. Clicking the button increments it.
+В этом примере **хранимка** `count` удерживает число. Нажатие на кнопку увеличивает его.
 
 <Sandpack>
 
@@ -170,9 +178,10 @@ export default function Counter() {
 
 <Solution />
 
-#### Text field (string) {/*text-field-string*/}
+#### Текстовое поле (вервь) {/*text-field-string*/}
 
-In this example, the `text` state variable holds a string. When you type, `handleChange` reads the latest input value from the browser input DOM element, and calls `setText` to update the state. This allows you to display the current `text` below.
+В этом примере **хранимка** `text` удерживает вервь (строку). Когда ты пишешь, `handleChange` считывает свежее значение из узла разметки обозревателя и зовёт `setText`, дабы обновить **хранимку**. Сие позволяет явить нынешний `text` ниже.
+
 
 <Sandpack>
 
@@ -202,9 +211,10 @@ export default function MyInput() {
 
 <Solution />
 
-#### Checkbox (boolean) {/*checkbox-boolean*/}
+#### Галочка (да-нет) {/*checkbox-boolean*/}
 
-In this example, the `liked` state variable holds a boolean. When you click the input, `setLiked` updates the `liked` state variable with whether the browser checkbox input is checked. The `liked` variable is used to render the text below the checkbox.
+В этом примере **хранимка** `liked` удерживает значение «да-нет» (булево). Когда ты жмёшь на поле ввода, `setLiked` обновляет **хранимку** `liked` вестью о том, отмечена ли галочка в обозревателе. Переменная `liked` используется для отрисовки текста под полем ввода.
+
 
 <Sandpack>
 
@@ -238,9 +248,10 @@ export default function MyCheckbox() {
 
 <Solution />
 
-#### Form (two variables) {/*form-two-variables*/}
+#### Образчик (две хранимки) {/*form-two-variables*/}
 
-You can declare more than one state variable in the same component. Each state variable is completely independent.
+Ты можешь объявить более одной **хранимки** в одной и той же составной части. Каждая **хранимка** живёт своей волей, в полном обособлении от иных.
+
 
 <Sandpack>
 
@@ -278,9 +289,10 @@ button { display: block; margin-top: 10px; }
 
 ---
 
-### Updating state based on the previous state {/*updating-state-based-on-the-previous-state*/}
+### Править хранимку на основе её прошлого значения {/*updating-state-based-on-the-previous-state*/}
 
-Suppose the `age` is `42`. This handler calls `setAge(age + 1)` three times:
+Положим, `age` (возраст) равен `42`. Этот распорядитель зовёт `setAge(age + 1)` трижды:
+
 
 ```js
 function handleClick() {
@@ -290,9 +302,10 @@ function handleClick() {
 }
 ```
 
-However, after one click, `age` will only be `43` rather than `45`! This is because calling the `set` function [does not update](/learn/state-as-a-snapshot) the `age` state variable in the already running code. So each `setAge(age + 1)` call becomes `setAge(43)`.
+Однако после одного нажатия `age` станет лишь `43`, а не `45`! Сие творится оттого, что призыв дела `set` [не обновляет](/learn/state-as-a-snapshot) **хранимку** `age` в уже запущенном уставе. Посему каждый призыв `setAge(age + 1)` превращается в `setAge(43)`.
 
-To solve this problem, **you may pass an *updater function*** to `setAge` instead of the next state:
+Дабы решить сию задачу, **ты можешь передать *обновляющее дело*** в `setAge` вместо следующего значения:
+
 
 ```js [[1, 2, "a", 0], [2, 2, "a + 1"], [1, 3, "a", 0], [2, 3, "a + 1"], [1, 4, "a", 0], [2, 4, "a + 1"]]
 function handleClick() {
@@ -302,39 +315,41 @@ function handleClick() {
 }
 ```
 
-Here, `a => a + 1` is your updater function. It takes the <CodeStep step={1}>pending state</CodeStep> and calculates the <CodeStep step={2}>next state</CodeStep> from it.
+Здесь `a => a + 1` — это твоё **обновляющее дело**. Оно берёт <CodeStep step={1}>ожидающее значение</CodeStep> и вычисляет из него <CodeStep step={2}>следующее значение</CodeStep>.
 
-React puts your updater functions in a [queue.](/learn/queueing-a-series-of-state-updates) Then, during the next render, it will call them in the same order:
+**Расписыватель** ставит твои обновляющие дела в [очередь.](/learn/queueing-a-series-of-state-updates) Затем, во время следующей отрисовки, он позовёт их в том же порядке:
 
-1. `a => a + 1` will receive `42` as the pending state and return `43` as the next state.
-1. `a => a + 1` will receive `43` as the pending state and return `44` as the next state.
-1. `a => a + 1` will receive `44` as the pending state and return `45` as the next state.
+1. `a => a + 1` примет `42` как ожидающее значение и вернёт `43` как следующее.
+2. `a => a + 1` примет `43` как ожидающее значение и вернёт `44` как следующее.
+3. `a => a + 1` примет `44` как ожидающее значение и вернёт `45` как следующее.
 
-There are no other queued updates, so React will store `45` as the current state in the end.
+Иных правок в очереди нет, посему в итоге **Расписыватель** упрячет `45` как нынешнее состояние **хранимки**.
 
-By convention, it's common to name the pending state argument for the first letter of the state variable name, like `a` for `age`. However, you may also call it like `prevAge` or something else that you find clearer.
+По обычаю, ожидающий довод принято величать первой буквицей имени **хранимки**, например `a` для `age`. Однако ты можешь прозвать его и `prevAge` или как-то иначе, если тебе так понятнее.
 
-React may [call your updaters twice](#my-initializer-or-updater-function-runs-twice) in development to verify that they are [pure.](/learn/keeping-components-pure)
+**Расписыватель** может [позвать твои обновляющие дела дважды](#my-initializer-or-updater-function-runs-twice) при созидании, дабы убедиться, что они [чистые.](/learn/keeping-components-pure)
+
 
 <DeepDive>
 
-#### Is using an updater always preferred? {/*is-using-an-updater-always-preferred*/}
+#### Всегда ли лучше использовать обновляющее дело? {/*is-using-an-updater-always-preferred*/}
 
-You might hear a recommendation to always write code like `setAge(a => a + 1)` if the state you're setting is calculated from the previous state. There is no harm in it, but it is also not always necessary.
+Ты можешь услышать совет всегда писать устав вроде `setAge(a => a + 1)`, если то, что ты кладёшь в **хранимку**, высчитывается из её прошлого значения. Вреда в этом нет, но и нужды во всём подряд — тоже.
 
-In most cases, there is no difference between these two approaches. React always makes sure that for intentional user actions, like clicks, the `age` state variable would be updated before the next click. This means there is no risk of a click handler seeing a "stale" `age` at the beginning of the event handler.
+В большинстве случаев нет разницы между этими двумя путями. **Расписыватель** всегда следит, чтобы при волеизъявлениях (нажатиях), **хранимка** `age` обновилась до следующего клика. Это значит, что нет угрозы, будто распорядитель увидит «залежалый» `age` в начале своего дела.
 
-However, if you do multiple updates within the same event, updaters can be helpful. They're also helpful if accessing the state variable itself is inconvenient (you might run into this when optimizing re-renders).
+Однако, если ты творишь многую правку в одном и том же деянии, обновляющие дела могут подсобить. Ещё они полезны, когда дотянуться до самой переменной **хранимки** неудобно (такое бывает при сбережении мощи отрисовок).
 
-If you prefer consistency over slightly more verbose syntax, it's reasonable to always write an updater if the state you're setting is calculated from the previous state. If it's calculated from the previous state of some *other* state variable, you might want to combine them into one object and [use a reducer.](/learn/extracting-state-logic-into-a-reducer)
+Если ты ценишь лад и единство выше, чем краткость письма, то разумно всегда писать обновляющее дело, коль скоро новое значение берётся из старого. Если же оно высчитывается из прошлого значения какой-то *иной* **хранимки**, возможно, тебе стоит объединить их в одну **вещь** и [использовать сводник (reducer).](/learn/extracting-state-logic-into-a-reducer)
 
 </DeepDive>
 
-<Recipes titleText="The difference between passing an updater and passing the next state directly" titleId="examples-updater">
+<Recipes titleText="Разница между передачей обновляющего дела и передачей значения прямо" titleId="examples-updater">
 
-#### Passing the updater function {/*passing-the-updater-function*/}
+#### Передача обновляющего дела {/*passing-the-updater-function*/}
 
-This example passes the updater function, so the "+3" button works.
+В этом примере передаётся обновляющее дело, посему кнопка «+3» трудится исправно.
+
 
 <Sandpack>
 
@@ -373,9 +388,10 @@ h1 { display: block; margin: 10px; }
 
 <Solution />
 
-#### Passing the next state directly {/*passing-the-next-state-directly*/}
+#### Передача следующего значения прямо {/*passing-the-next-state-directly*/}
 
-This example **does not** pass the updater function, so the "+3" button **doesn't work as intended**.
+В этом примере обновляющее дело **не** передаётся, посему кнопка «+3» **не трудится так, как замышлялось**.
+
 
 <Sandpack>
 
@@ -418,16 +434,17 @@ h1 { display: block; margin: 10px; }
 
 ---
 
-### Updating objects and arrays in state {/*updating-objects-and-arrays-in-state*/}
+### Править вещи и ряды в хранимке {/*updating-objects-and-arrays-in-state*/}
 
-You can put objects and arrays into state. In React, state is considered read-only, so **you should *replace* it rather than *mutate* your existing objects**. For example, if you have a `form` object in state, don't mutate it:
+Ты можешь класть **вещи** (объекты) и **ряды** (массивы) в свою **хранимку**. В мире Расписывателя хранимка почитается неизменной (только для чтения), посему **тебе следует *заменять* её, а не *искажать* уже существующие вещи**. К примеру, если в твоей хранимке лежит вещь `form`, не искажай её:
+
 
 ```js
 // 🚩 Don't mutate an object in state like this:
 form.firstName = 'Taylor';
 ```
 
-Instead, replace the whole object by creating a new one:
+Вместо этого замени всю **вещь** целиком, сотворив новую:
 
 ```js
 // ✅ Replace state with a new object
@@ -437,13 +454,14 @@ setForm({
 });
 ```
 
-Read [updating objects in state](/learn/updating-objects-in-state) and [updating arrays in state](/learn/updating-arrays-in-state) to learn more.
+Почитай об [обновлении вещей в хранимке](/learn/updating-objects-in-state) и [обновлении рядов в хранимке](/learn/updating-arrays-in-state), дабы уяснить больше.
 
-<Recipes titleText="Examples of objects and arrays in state" titleId="examples-objects">
+<Recipes titleText="Примеры вещей и рядов в хранимке" titleId="examples-objects">
 
-#### Form (object) {/*form-object*/}
+#### Образчик (вещь) {/*form-object*/}
 
-In this example, the `form` state variable holds an object. Each input has a change handler that calls `setForm` with the next state of the entire form. The `{ ...form }` spread syntax ensures that the state object is replaced rather than mutated.
+В этом примере **хранимка** `form` удерживает вещь (объект). У каждого поля ввода есть свой распорядитель правки, который зовёт `setForm` с новым состоянием всего образчика. Устав `{ ...form }` (расплетание) гарантирует, что вещь в хранимке будет заменена, а не искажена.
+
 
 <Sandpack>
 
@@ -514,9 +532,10 @@ input { margin-left: 5px; }
 
 <Solution />
 
-#### Form (nested object) {/*form-nested-object*/}
+#### Образчик (вложенная вещь) {/*form-nested-object*/}
 
-In this example, the state is more nested. When you update nested state, you need to create a copy of the object you're updating, as well as any objects "containing" it on the way upwards. Read [updating a nested object](/learn/updating-objects-in-state#updating-a-nested-object) to learn more.
+В этом примере **хранимка** имеет глубокое вложение. Когда ты правишь вложенные вести, тебе надобно сотворить копию не только той вещи, которую ты обновляешь, но и всех вещей, что «содержат» её на пути к верху. Почитай об [обновлении вложенных вещей](/learn/updating-objects-in-state#updating-a-nested-object), дабы уяснить больше.
+
 
 <Sandpack>
 
@@ -626,9 +645,10 @@ img { width: 200px; height: 200px; }
 
 <Solution />
 
-#### List (array) {/*list-array*/}
+#### Ряд (массив) {/*list-array*/}
 
-In this example, the `todos` state variable holds an array. Each button handler calls `setTodos` with the next version of that array. The `[...todos]` spread syntax, `todos.map()` and `todos.filter()` ensure the state array is replaced rather than mutated.
+В этом примере **хранимка** `todos` (дела) удерживает ряд (массив). Каждый распорядитель кнопки зовёт `setTodos` с новой версией этого ряда. Устав расплетания `[...todos]`, а также сведения `todos.map()` и `todos.filter()` гарантируют, что ряд в хранимке будет заменен, а не искажен.
+
 
 <Sandpack>
 
@@ -793,9 +813,10 @@ ul, li { margin: 0; padding: 0; }
 
 <Solution />
 
-#### Writing concise update logic with Immer {/*writing-concise-update-logic-with-immer*/}
+#### Письмо складного устава правки с Погружением {/*writing-concise-update-logic-with-immer*/}
 
-If updating arrays and objects without mutation feels tedious, you can use a library like [Immer](https://github.com/immerjs/use-immer) to reduce repetitive code. Immer lets you write concise code as if you were mutating objects, but under the hood it performs immutable updates:
+Если замена рядов и вещей без искажения кажется тебе докучной, ты можешь взять набор заготовок вроде [Погружения](https://github.com/immerjs/use-immer) (Immer), дабы сократить повторы в уставе. Погружение дозволяет тебе писать складный устав, будто ты искажаешь вещи, но под исподом оно само заменяет их неизменно:
+
 
 <Sandpack>
 
@@ -884,9 +905,10 @@ function ItemList({ artworks, onToggle }) {
 
 ---
 
-### Avoiding recreating the initial state {/*avoiding-recreating-the-initial-state*/}
+### Как избежать повторного созидания начала хранимки {/*avoiding-recreating-the-initial-state*/}
 
-React saves the initial state once and ignores it on the next renders.
+Расписыватель сберегает начало хранимки лишь единожды и оставляет его без внимания при последующих отрисовках.
+
 
 ```js
 function TodoList() {
@@ -894,9 +916,10 @@ function TodoList() {
   // ...
 ```
 
-Although the result of `createInitialTodos()` is only used for the initial render, you're still calling this function on every render. This can be wasteful if it's creating large arrays or performing expensive calculations.
+Хотя исход дела `createInitialTodos()` нужен лишь для первого зачина, ты всё равно зовёшь это дело при каждой отрисовке. Сие может быть расточительным, если оно созидает великие ряды или творит тяжкие расчёты.
 
-To solve this, you may **pass it as an _initializer_ function** to `useState` instead:
+Дабы решить сию задачу, ты можешь **передать его как *зачинающее* дело** в `useState` вместо самого значения:
+
 
 ```js
 function TodoList() {
@@ -904,15 +927,16 @@ function TodoList() {
   // ...
 ```
 
-Notice that you’re passing `createInitialTodos`, which is the *function itself*, and not `createInitialTodos()`, which is the result of calling it. If you pass a function to `useState`, React will only call it during initialization.
+Заметим, что ты передаёшь `createInitialTodos`, то есть **само дело**, а не `createInitialTodos()`, что было бы исходом его призыва. Если ты передашь само дело в `useState`, **Расписыватель** позовёт его лишь единожды, при самом зачине.
 
-React may [call your initializers twice](#my-initializer-or-updater-function-runs-twice) in development to verify that they are [pure.](/learn/keeping-components-pure)
+**Расписыватель** может [позвать твои зачинающие дела дважды](#my-initializer-or-updater-function-runs-twice) при созидании, дабы убедиться, что они [чистые.](/learn/keeping-components-pure)
 
-<Recipes titleText="The difference between passing an initializer and passing the initial state directly" titleId="examples-initializer">
+<Recipes titleText="Разница между передачей зачинающего дела и передачей начала прямо" titleId="examples-initializer">
 
-#### Passing the initializer function {/*passing-the-initializer-function*/}
+#### Передача зачинающего дела {/*passing-the-initializer-function*/}
 
-This example passes the initializer function, so the `createInitialTodos` function only runs during initialization. It does not run when component re-renders, such as when you type into the input.
+В этом примере передаётся зачинающее дело, посему дело `createInitialTodos` срабатывает лишь при зачине. Оно не запускается при перерисовке части — к примеру, когда ты пишешь в поле ввода.
+
 
 <Sandpack>
 
@@ -963,9 +987,10 @@ export default function TodoList() {
 
 <Solution />
 
-#### Passing the initial state directly {/*passing-the-initial-state-directly*/}
+#### Передача начала хранимки прямо {/*passing-the-initial-state-directly*/}
 
-This example **does not** pass the initializer function, so the `createInitialTodos` function runs on every render, such as when you type into the input. There is no observable difference in behavior, but this code is less efficient.
+В этом примере зачинающее дело **не** передаётся, посему дело `createInitialTodos` срабатывает при каждой отрисовке — например, когда ты пишешь в поле ввода. Зримой разницы в поведении нет, но такой устав менее бережлив к мощи.
+
 
 <Sandpack>
 
@@ -1020,13 +1045,14 @@ export default function TodoList() {
 
 ---
 
-### Resetting state with a key {/*resetting-state-with-a-key*/}
+### Сброс хранимки через ключ {/*resetting-state-with-a-key*/}
 
-You'll often encounter the `key` attribute when [rendering lists.](/learn/rendering-lists) However, it also serves another purpose.
+Ты часто будешь встречать признак `key` (ключ) при [отрисовке рядов.](/learn/rendering-lists) Однако у него есть и иное назначение.
 
-You can **reset a component's state by passing a different `key` to a component.** In this example, the Reset button changes the `version` state variable, which we pass as a `key` to the `Form`. When the `key` changes, React re-creates the `Form` component (and all of its children) from scratch, so its state gets reset.
+Ты можешь **сбросить хранимку составной части, передав ей иной `key`.** В этом примере кнопка «Сброс» меняет **хранимку** `version`, которую мы передаём как `key` в часть `Form` (Образчик). Когда `key` меняется, **Расписыватель** созидает часть `Form` (и всех её чад) заново, с чистого листа, посему и её **хранимка** сбрасывается к началу.
 
-Read [preserving and resetting state](/learn/preserving-and-resetting-state) to learn more.
+Почитай о [сбережении и сбросе хранимки](/learn/preserving-and-resetting-state), дабы уяснить больше.
+
 
 <Sandpack>
 
@@ -1071,19 +1097,20 @@ button { display: block; margin-bottom: 20px; }
 
 ---
 
-### Storing information from previous renders {/*storing-information-from-previous-renders*/}
+### Сбережение вестей из прошлых отрисовок {/*storing-information-from-previous-renders*/}
 
-Usually, you will update state in event handlers. However, in rare cases you might want to adjust state in response to rendering -- for example, you might want to change a state variable when a prop changes.
+Обычно ты правишь **хранимку** в распорядителях деяний. Однако в редких случаях тебе может понадобиться подстроить **хранимку** в ответ на саму отрисовку — к примеру, если ты хочешь сдвинуть значение, когда меняется пришедший **дар** (prop).
 
-In most cases, you don't need this:
+В большинстве случаев тебе сие не надобно:
 
-* **If the value you need can be computed entirely from the current props or other state, [remove that redundant state altogether.](/learn/choosing-the-state-structure#avoid-redundant-state)** If you're worried about recomputing too often, the [`useMemo` Hook](/reference/react/useMemo) can help.
-* If you want to reset the entire component tree's state, [pass a different `key` to your component.](#resetting-state-with-a-key)
-* If you can, update all the relevant state in the event handlers.
+* **Если искомое значение можно высчитать целиком из нынешних даров или иных хранимок, [удали сию лишнюю хранимку вовсе.](/learn/choosing-the-state-structure#avoid-redundant-state)** Если ты опасаешься слишком частых расчётов, **Подключение** [`useMemo`](/reference/react/useMemo) тебе подсобит.
+* Если ты хочешь сбросить **хранимки** всего древа частей, [передай своей части иной `key`.](#resetting-state-with-a-key)
+* Если есть возможность, обнови все нужные **хранимки** прямо в распорядителях деяний.
 
-In the rare case that none of these apply, there is a pattern you can use to update state based on the values that have been rendered so far, by calling a `set` function while your component is rendering.
+В том редком случае, когда ничто из вышесказанного не ладит с твоим делом, есть узор письма, позволяющий обновить **хранимку** на основе уже отрисованных вестей, призвав дело `set` прямо во время отрисовки части.
 
-Here's an example. This `CountLabel` component displays the `count` prop passed to it:
+Вот пример. Сия составная часть `CountLabel` являет дар `count`, переданный ей:
+
 
 ```js src/CountLabel.js
 export default function CountLabel({ count }) {
@@ -1091,7 +1118,8 @@ export default function CountLabel({ count }) {
 }
 ```
 
-Say you want to show whether the counter has *increased or decreased* since the last change. The `count` prop doesn't tell you this -- you need to keep track of its previous value. Add the `prevCount` state variable to track it. Add another state variable called `trend` to hold whether the count has increased or decreased. Compare `prevCount` with `count`, and if they're not equal, update both `prevCount` and `trend`. Now you can show both the current count prop and *how it has changed since the last render*.
+Положим, ты хочешь явить, *вырос или умалился* счётчик с прошлой правки. Дар `count` сам об этом не поведает — тебе надобно блюсти его прошлое значение. Добавь **хранимку** `prevCount`, дабы следить за ним. Добавь и иную **хранимку**, прозванную `trend` (веяние), дабы помнить, вырос счёт или умалился. Сличи `prevCount` с нынешним `count`, и ежели они не в ладу, обнови и `prevCount`, и `trend`. Теперь ты можешь явить и нынешний дар `count`, и то, *как он сдвинулся с прошлой отрисовки*.
+
 
 <Sandpack>
 
@@ -1140,17 +1168,19 @@ button { margin-bottom: 10px; }
 
 </Sandpack>
 
-Note that if you call a `set` function while rendering, it must be inside a condition like `prevCount !== count`, and there must be a call like `setPrevCount(count)` inside of the condition. Otherwise, your component would re-render in a loop until it crashes. Also, you can only update the state of the *currently rendering* component like this. Calling the `set` function of *another* component during rendering is an error. Finally, your `set` call should still [update state without mutation](#updating-objects-and-arrays-in-state) -- this doesn't mean you can break other rules of [pure functions.](/learn/keeping-components-pure)
+Заметим, что если ты зовёшь дело `set` прямо во время отрисовки, оно должно быть упрятано в условие вроде `prevCount !== count`, и внутри него обязательно должен быть призыв вида `setPrevCount(count)`. Иначе твоя составная часть будет перерисовываться по кругу, пока не случится крушение. Также ты можешь править только **хранимку** той части, что *отрисовывается прямо сейчас*. Призыв дела `set` *иной* части во время отрисовки — это великая погрешность. Наконец, твой призыв `set` всё равно должен [обновлять хранимку без искажения](#updating-objects-and-arrays-in-state) — это не даёт тебе права нарушать иные правила [чистых дел.](/learn/keeping-components-pure)
 
-This pattern can be hard to understand and is usually best avoided. However, it's better than updating state in an effect. When you call the `set` function during render, React will re-render that component immediately after your component exits with a `return` statement, and before rendering the children. This way, children don't need to render twice. The rest of your component function will still execute (and the result will be thrown away). If your condition is below all the Hook calls, you may add an early `return;` to restart rendering earlier.
+Такой узор письма может быть тяжким для уразумения, и обычно его лучше избегать. Однако это всё же краше, чем править хранимку в **Воздействии** (Effect). Когда ты зовёшь дело `set` во время отрисовки, **Расписыватель** перерисует эту часть тотчас после того, как она выйдет через указ `return`, и до того, как начнёт отрисовывать её чад. Так чадам не придётся отрисовываться дважды. Остаток твоего дела всё равно выполнится (а исход будет отброшен). Если твоё условие стоит под всеми призывами **Подключений**, ты можешь добавить ранний `return;`, дабы запустить отрисовку заново поскорее.
+
 
 ---
 
-## Troubleshooting {/*troubleshooting*/}
+## Сыск погрешностей {/*troubleshooting*/}
 
-### I've updated the state, but logging gives me the old value {/*ive-updated-the-state-but-logging-gives-me-the-old-value*/}
+### Я обновил хранимку, но в журнале Живописи всё равно старое значение {/*ive-updated-the-state-but-logging-gives-me-the-old-value*/}
 
-Calling the `set` function **does not change state in the running code**:
+Призыв дела `set` **не меняет хранимку в уже запущенном уставе**:
+
 
 ```js {4,5,8}
 function handleClick() {
@@ -1165,9 +1195,10 @@ function handleClick() {
 }
 ```
 
-This is because [states behaves like a snapshot.](/learn/state-as-a-snapshot) Updating state requests another render with the new state value, but does not affect the `count` JavaScript variable in your already-running event handler.
+Сие творится оттого, что [**хранимка** ведёт себя подобно снимку.](/learn/state-as-a-snapshot) Обновление хранимки — это наказ на новую отрисовку с новым значением, но оно не трогает переменную `count` в твоём уже запущенном распорядителе **Живописи**.
 
-If you need to use the next state, you can save it in a variable before passing it to the `set` function:
+Если тебе надобно использовать следующее значение тотчас, ты можешь сберечь его в переменной перед тем, как передать его делу `set`:
+
 
 ```js
 const nextCount = count + 1;

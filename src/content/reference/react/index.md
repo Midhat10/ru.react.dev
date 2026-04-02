@@ -1,42 +1,43 @@
 ---
-title: React Reference Overview
+title: Обзор Указов Расписывателя
 ---
 
 <Intro>
 
-This section provides detailed reference documentation for working with React. For an introduction to React, please visit the [Learn](/learn) section.
+Этот раздел даёт подробные указы для работы с Расписывателем. Для начального знакомства с ним, пожалуйста, посети раздел [Поучение](/learn).
 
 </Intro>
 
-The React reference documentation is broken down into functional subsections:
+Указы Расписывателя разбиты на деловые разделы:
 
-## React {/*react*/}
+## Расписыватель {/*react*/}
 
-Programmatic React features:
+Уставные умения Расписывателя:
 
-* [Hooks](/reference/react/hooks) - Use different React features from your components.
-* [Components](/reference/react/components) - Built-in components that you can use in your JSX.
-* [APIs](/reference/react/apis) - APIs that are useful for defining components.
-* [Directives](/reference/rsc/directives) - Provide instructions to bundlers compatible with React Server Components.
+* [Подключения](/reference/react/hooks) — используй разные умения Расписывателя внутри своих составных частей.
+* [Составные части](/reference/react/components) — встроенные зёрна, которые ты можешь использовать в своей Вязи.
+* [Дела (APIs)](/reference/react/apis) — наказы, полезные для созидания составных частей.
+* [Наставления](/reference/rsc/directives) — дают указания сборщикам, ладящим с Закромными Частями Расписывателя.
 
-## React DOM {/*react-dom*/}
+## Лик-разметка {/*react-dom*/}
 
-React-dom contains features that are only supported for web applications (which run in the browser DOM environment). This section is broken into the following:
+Лик-разметка содержит умения, кои в ходу лишь в сетевых приложениях (что трудятся в обозревателе). Этот раздел поделён на:
 
-* [Hooks](/reference/react-dom/hooks) - Hooks for web applications which run in the browser DOM environment.
-* [Components](/reference/react-dom/components) - React supports all of the browser built-in HTML and SVG components.
-* [APIs](/reference/react-dom) - The `react-dom` package contains methods supported only in web applications.
-* [Client APIs](/reference/react-dom/client) - The `react-dom/client` APIs let you render React components on the client (in the browser).
-* [Server APIs](/reference/react-dom/server) - The `react-dom/server` APIs let you render React components to HTML on the server.
+* [Подключения](/reference/react-dom/hooks) — подключения для сетевых дел, работающих в среде обозревателя.
+* [Составные части](/reference/react-dom/components) — Расписыватель ладит со всеми встроенными в обозреватель узлами сетевой разметки и узоров (SVG).
+* [Дела](/reference/react-dom) — узел «лик-разметки» содержит пути, ведомые только сетевым приложениям.
+* [Дела гостя](/reference/react-dom/client) — наказы для гостя позволяют отрисовывать части Расписывателя в обозревателе.
+* [Дела закромов](/reference/react-dom/server) — наказы закромов позволяют превращать части Расписывателя в сетевую разметку на сервере.
 
-## Rules of React {/*rules-of-react*/}
+## Правила Расписывателя {/*rules-of-react*/}
 
-React has idioms — or rules — for how to express patterns in a way that is easy to understand and yields high-quality applications:
+У Расписывателя есть свои обычаи — или правила — о том, как излагать узоры устава так, чтобы они были понятны и вели к добрым приложениям:
 
-* [Components and Hooks must be pure](/reference/rules/components-and-hooks-must-be-pure) – Purity makes your code easier to understand, debug, and allows React to automatically optimize your components and hooks correctly.
-* [React calls Components and Hooks](/reference/rules/react-calls-components-and-hooks) – React is responsible for rendering components and hooks when necessary to optimize the user experience.
-* [Rules of Hooks](/reference/rules/rules-of-hooks) – Hooks are defined using JavaScript functions, but they represent a special type of reusable UI logic with restrictions on where they can be called.
+* [Части и Подключения должны быть чистыми](/reference/rules/components-and-hooks-must-be-pure) — Чистота делает твой устав ясным, помогает в сыске погрешностей и позволяет Расписывателю самому улучшать работу твоих частей.
+* [Расписыватель сам зовёт Части и Подключения](/reference/rules/react-calls-components-and-hooks) — Расписыватель ведает отрисовкой частей, когда это надобно для удобства лика программы.
+* [Правила Подключений](/reference/rules/rules-of-hooks) — Подключения пишутся Живописью, но они являют собой особый род многоразового смысла для лика программы с запретами на то, где их можно звать.
 
-## Legacy APIs {/*legacy-apis*/}
+## Ветхие Дела {/*legacy-apis*/}
 
-* [Legacy APIs](/reference/react/legacy) - Exported from the `react` package, but not recommended for use in newly written code.
+* [Ветхие Дела](/reference/react/legacy) — всё ещё выдаются узлом Расписывателя, но не созвучны доброму нраву и не сосватаны для нового устава.
+
