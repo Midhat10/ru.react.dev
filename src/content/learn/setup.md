@@ -1,28 +1,28 @@
 ---
-title: Setup
+title: Настройка
 ---
 <Intro>
 
-React integrates with tools like editors, TypeScript, browser extensions, and compilers. This section will help you get your environment set up.
+Расписыватель дружит с разными инструментами: редакторами, TypeScript, расширениями для обозревателей и сборщиками. Этот раздел поможет тебе подготовить всё к работе.
 
 </Intro>
 
-## Editor Setup {/*editor-setup*/}
+## Настройка редактора {/*editor-setup*/}
 
-See our [recommended editors](/learn/editor-setup) and learn how to set them up to work with React.
+Посмотри [редакторы, которые мы советуем](/learn/editor-setup), и узнай, как подружить их с Расписывателем.
 
-## Using TypeScript {/*using-typescript*/}
+## Использование TypeScript {/*using-typescript*/}
 
-TypeScript is a popular way to add type definitions to JavaScript codebases. [Learn how to integrate TypeScript into your React projects](/learn/typescript).
+TypeScript — это привычный путь добавить чёткости в код на Живописи. [Узнай, как вплести TypeScript в свои проекты на Расписывателе](/learn/typescript).
 
-## React Developer Tools {/*react-developer-tools*/}
+## Инструменты разработчика {/*react-developer-tools*/}
 
-React Developer Tools is a browser extension that can inspect React components, edit props and state, and identify performance problems. Learn how to install it [here](learn/react-developer-tools).
+Инструменты разработчика — это расширение для обозревателя, которое позволяет заглянуть внутрь составных частей, подправить посылы и хранимку, а также найти слабые места в работе программы. Узнай, как их поставить, [здесь](learn/react-developer-tools).
 
-## React Compiler {/*react-compiler*/}
+## Сборщик (React Compiler) {/*react-compiler*/}
 
-React Compiler is a tool that automatically optimizes your React app. [Learn more](/learn/react-compiler).
+Сборщик — это инструмент, который сам доводит твоё приложение до ума, делая его быстрее. [Узнай больше](/learn/react-compiler).
 
-## Next steps {/*next-steps*/}
+## Что дальше? {/*next-steps*/}
 
-Head to the [Quick Start](/learn) guide for a tour of the most important React concepts you will encounter every day.
+Загляни в руководство [Быстрый старт](/learn), чтобы познакомиться с самыми важными правилами Расписывателя, которые пригодятся тебе каждый день.
