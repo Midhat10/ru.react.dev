@@ -8,9 +8,18 @@
 const nextConfig = {
   pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
   reactStrictMode: true,
+  // Добавляем перечень узлов для сквозного прочтения
+  transpilePackages: [
+    'remark',
+    'remark-html',
+    'mdast-util-to-hast',
+    'unist-util-visit',
+  ],
   experimental: {
     scrollRestoration: true,
     reactCompiler: true,
+    // Разрешаем вольное обращение с заморскими модулями
+    esmExternals: 'loose',
   },
   env: {},
   webpack: (config, {dev, isServer, ...options}) => {
@@ -26,7 +35,6 @@ const nextConfig = {
       );
     }
 
-    // Don't bundle the shim unnecessarily.
     config.resolve.alias['use-sync-external-store/shim'] = 'react';
 
     const {IgnorePlugin, NormalModuleReplacementPlugin} = require('webpack');
@@ -45,9 +53,6 @@ const nextConfig = {
             /\/eslint\/lib\/rules$/.test(context) &&
             /\.\/[\w-]+(\.js)?$/.test(resource)
           ) {
-            // Skips imports of built-in rules that ESLint
-            // tries to carry into the bundle by default.
-            // We only want the engine and the React rules.
             return true;
           }
           return false;

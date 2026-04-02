@@ -1,7 +1,7 @@
 ---
-id: home
-title: React
+id: начало
+title: Отзывник
 permalink: index.html
 ---
 
-{/* See HomeContent.js */}
+{/* Гляди в СодержимоеНачала.js */}
