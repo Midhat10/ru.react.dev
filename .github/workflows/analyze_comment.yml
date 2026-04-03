@@ -1,4 +1,4 @@
-name: Analyze Bundle (Comment)
+name: Доклад о весе (Analyze Bundle Comment)
 
 on:
   workflow_run:
@@ -8,6 +8,10 @@ on:
 
 permissions: {}
 
+# ДОБАВИМ СИЛОВОЙ НАКАЗ, ЧТОБЫ ВСЕ ВЛОЖЕННЫЕ ОРУДИЯ СЛУШАЛИСЬ
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   comment:
     runs-on: ubuntu-latest
@@ -15,29 +19,30 @@ jobs:
       ${{ github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Download base branch bundle stats
-        uses: dawidd6/action-download-artifact@268677152d06ba59fcec7a7f0b5d961b6ccd7e1e
+      - name: Скачать итоги замера веса
+        # Обновляем до v3 для лучшей дружбы с новыми версиями
+        uses: dawidd6/action-download-artifact@v3
         with:
           workflow: analyze.yml
           run_id: ${{ github.event.workflow_run.id }}
           name: analysis_comment.txt
           path: analysis_comment.txt
 
-      - name: Download PR number
-        uses: dawidd6/action-download-artifact@268677152d06ba59fcec7a7f0b5d961b6ccd7e1e
+      - name: Скачать номер прошения (PR)
+        uses: dawidd6/action-download-artifact@v3
         with:
           workflow: analyze.yml
           run_id: ${{ github.event.workflow_run.id }}
           name: pr_number
           path: pr_number
 
-      - name: Get comment body
+      - name: Сложить текст доклада
         id: get-comment-body
         if: success()
         run: |
           echo 'body<<EOF' >> $GITHUB_OUTPUT
           echo '' >>  $GITHUB_OUTPUT
-          echo '## Size changes' >>  $GITHUB_OUTPUT
+          echo '## Перемены в весе (Size changes)' >>  $GITHUB_OUTPUT
           echo '' >>  $GITHUB_OUTPUT
           echo '<details>' >>  $GITHUB_OUTPUT
           echo '' >>  $GITHUB_OUTPUT
@@ -49,8 +54,9 @@ jobs:
           pr_number=$(cat pr_number/pr_number)
           echo "pr-number=$pr_number" >> $GITHUB_OUTPUT
 
-      - name: Comment
-        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728
+      - name: Оставить весть в прошении
+        # Обновляем до v2
+        uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: next-bundle-analysis
           number: ${{ steps.get-comment-body.outputs.pr-number }}

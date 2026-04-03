@@ -1,37 +1,45 @@
-name: Site Lint / Heading ID check
+name: Проверка вязи и заголовков (Site Lint)
 
 on:
   push:
     branches:
-      - main # change this if your default branch is named differently
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
 
 permissions: {}
 
+# СИЛОВОЙ НАКАЗ ДЛЯ ТИШИНЫ В ЛЕТОПИСИ
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   lint:
     runs-on: ubuntu-latest
 
-    name: Lint on node 24.x and ubuntu-latest
+    name: Проверка на Node.js 24.x
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 24.x
-        uses: actions/setup-node@v4
+      - name: Взять код
+        uses: actions/checkout@v4.2.2
+
+      - name: Устроить Свод Жизни (Node.js 24)
+        uses: actions/setup-node@v4.2.0
         with:
           node-version: 24.x
           cache: yarn
           cache-dependency-path: yarn.lock
 
-      - name: Restore cached node_modules
-        uses: actions/cache@v4
+      - name: Вернуть припасы (node_modules)
+        uses: actions/cache@v4.2.0
         with:
           path: '**/node_modules'
           key: node_modules-${{ runner.arch }}-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
-      - name: Install deps
+      - name: Собрать припасы
         run: yarn install --frozen-lockfile
 
-      - name: Lint codebase
+      - name: Проверить чистоту вязи
         run: yarn ci-check
+        # Если хочешь, чтобы сайт выходил в мир даже с мелкими огрехами,
+        # добавь ниже: continue-on-error: true

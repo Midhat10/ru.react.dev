@@ -1,20 +1,21 @@
-name: Label Core Team PRs
+name: Метка для главных зодчих (Label Core Team PRs)
 
 on:
   pull_request_target:
 
 permissions: {}
 
+# СИЛОВОЙ НАКАЗ ДЛЯ ТИШИНЫ В ЛЕТОПИСИ
 env:
   TZ: /usr/share/zoneinfo/America/Los_Angeles
-  # https://github.com/actions/cache/blob/main/tips-and-workarounds.md#cache-segment-restore-timeout
   SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   check_maintainer:
+    # Обращаемся к общим правилам Фейсбука
     uses: facebook/react/.github/workflows/shared_check_maintainer.yml@main
     permissions:
-      # Used by check_maintainer
       contents: read
     with:
       actor: ${{ github.event.pull_request.user.login }}
@@ -24,12 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: check_maintainer
     permissions:
-      # Used to add labels on issues
       issues: write
-      # Used to add labels on PRs
       pull-requests: write
     steps:
-      - name: Label PR as React Core Team
+      - name: Поставить метку «Дружина Расписывателя»
+        # Используем v7 — оно уже дружит с новыми версиями
         uses: actions/github-script@v7
         with:
           script: |

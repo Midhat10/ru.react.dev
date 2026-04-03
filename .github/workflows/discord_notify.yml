@@ -1,4 +1,4 @@
-name: Discord Notify
+name: Вестник Дискорда (Discord Notify)
 
 on:
   pull_request_target:
@@ -6,11 +6,15 @@ on:
 
 permissions: {}
 
+# СИЛОВОЙ НАКАЗ ДЛЯ ТИШИНЫ В ЛЕТОПИСИ
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   check_maintainer:
+    # Оставляем как есть, это обращение к общим правилам Фейсбука
     uses: facebook/react/.github/workflows/shared_check_maintainer.yml@main
     permissions:
-      # Used by check_maintainer
       contents: read
     with:
       actor: ${{ github.event.pull_request.user.login }}
@@ -20,7 +24,8 @@ jobs:
     needs: check_maintainer
     runs-on: ubuntu-latest
     steps:
-      - name: Discord Webhook Action
+      - name: Весть в Дискорд (Webhook)
+        # Обновляем до v6.0.0 (или оставляем текущую, если она уже свежая)
         uses: tsickert/discord-webhook@v6.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
