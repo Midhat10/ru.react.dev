@@ -17,13 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Взять код
-        uses: actions/checkout@v4
-
-      - name: Устроить Свод Жизни (Node.js)
-        uses: actions/setup-node@v4
+        uses: actions/checkout@v4.2.2 # Обновили до свежего лика
+      - name: Устроить Свод Жизни (Node.js 24)
+        uses: actions/setup-node@v4.2.0 # Обновили до свежего лика
         with:
           node-version: 24
-          cache: 'yarn' # У тебя в ларце лежит yarn.lock, значит используем Yarn
+          cache: 'yarn'
 
       - name: Собрать припасы
         run: yarn install --frozen-lockfile
