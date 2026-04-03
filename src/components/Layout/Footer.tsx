@@ -312,7 +312,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col">
-           <FooterLink href="/learn" isHeader={true}>
+          <FooterLink href="/learn" isHeader={true}>
             Изучайте React
           </FooterLink>
           <FooterLink href="/learn/">Быстрый старт</FooterLink>
@@ -323,7 +323,9 @@ export function Footer() {
           <FooterLink href="/learn/adding-interactivity">
             Добавление интерактивности
           </FooterLink>
-          <FooterLink href="/learn/managing-state">Управление состоянием</FooterLink>
+          <FooterLink href="/learn/managing-state">
+            Управление состоянием
+          </FooterLink>
           <FooterLink href="/learn/escape-hatches">Обходные пути</FooterLink>
         </div>
         <div className="flex flex-col">
@@ -349,7 +351,7 @@ export function Footer() {
           </FooterLink>
         </div>
         <div className="flex flex-col">
-         <FooterLink isHeader={true}>Дополнительно</FooterLink>
+          <FooterLink isHeader={true}>Дополнительно</FooterLink>
           <FooterLink href="/blog">Блог</FooterLink>
           <FooterLink href="https://reactnative.dev/">React Native</FooterLink>
           <FooterLink href="https://opensource.facebook.com/legal/privacy">

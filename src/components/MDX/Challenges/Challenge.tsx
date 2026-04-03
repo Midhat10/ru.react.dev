@@ -61,7 +61,6 @@ export function Challenge({
       <div className="flex justify-between items-center mt-4">
         {currentChallenge.hint ? (
           <div>
-
             <Button className="mr-2" onClick={toggleHint} active={showHint}>
               <IconHint className="mr-1.5" />{' '}
               {showHint ? 'Скрыть подсказку' : 'Показать подсказку'}
@@ -80,7 +79,6 @@ export function Challenge({
               className="me-2"
               onClick={toggleSolution}
               active={showSolution}>
-
               <IconSolution className="mr-1.5" />{' '}
               {showSolution ? 'Скрыть решение' : 'Показать решение'}
             </Button>
