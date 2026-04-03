@@ -1,31 +1,32 @@
 ---
-title: 'Tutorial: Tic-Tac-Toe'
+title: 'Поучение: Крестики-нолики'
 ---
 
 <Intro>
 
-You will build a small tic-tac-toe game during this tutorial. This tutorial does not assume any existing React knowledge. The techniques you'll learn in the tutorial are fundamental to building any React app, and fully understanding it will give you a deep understanding of React.
+В ходе этого поучения ты сотворишь небольшую забаву «Крестики-нолики». Сие занятие не требует от тебя бывалых познаний в **Расписывателе**. Приёмы, что ты освоишь, лежат в основе любого дела на этой почве, а полное их понимание даст тебе глубокое видение того, как работает **Расписыватель**.
 
 </Intro>
 
 <Note>
 
-This tutorial is designed for people who prefer to **learn by doing** and want to quickly try making something tangible. If you prefer learning each concept step by step, start with [Describing the UI.](/learn/describing-the-ui)
+Это поучение проложено для тех, кто предпочитает **постигать через дело** и желает поскорее создать что-то осязаемое. Если же тебе милее изучать каждый уклад шаг за шагом, начни с [Описания облика страницы.](/learn/describing-the-ui)
 
 </Note>
 
-The tutorial is divided into several sections:
+Поучение поделено на несколько частей:
 
-- [Setup for the tutorial](#setup-for-the-tutorial) will give you **a starting point** to follow the tutorial.
-- [Overview](#overview) will teach you **the fundamentals** of React: components, props, and state.
-- [Completing the game](#completing-the-game) will teach you **the most common techniques** in React development.
-- [Adding time travel](#adding-time-travel) will give you **a deeper insight** into the unique strengths of React.
+- [Подготовка к делу](#setup-for-the-tutorial) даст тебе **отправную точку**, дабы следовать уроку.
+- [Общий взгляд](#overview) обучит тебя **основам** **Расписывателя**: составным частям, **Настройкам** (пропсам) и данным из хранилищ (состоянию).
+- [Завершение забавы](#completing-the-game) откроет тебе **самые привычные приёмы** в зодчестве на **Расписывателе**.
+- [Добавление путевых записей](#adding-time-travel) даст **глубокое понимание** особых сил **Расписывателя**.
 
-### What are you building? {/*what-are-you-building*/}
+### Что именно ты созидаешь? {/*what-are-you-building*/}
 
-In this tutorial, you'll build an interactive tic-tac-toe game with React.
+В этом поучении ты возведёшь живую забаву «Крестики-нолики» с помощью **Расписывателя**.
 
-You can see what it will look like when you're finished here:
+Ты можешь узреть, как она будет выглядеть в итоге:
+
 
 <Sandpack>
 

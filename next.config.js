@@ -6,6 +6,11 @@
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
+  // --- ДОБАВЬ ЭТИ ТРИ СТРОКИ ДЛЯ ГИТХАБА ---
+  output: 'export', // Приказываем выдать готовые свитки в папку 'out'
+  basePath: '/ru.react.dev', // Путь твоего надела на Гитхабе
+  images: {unoptimized: true}, // Чтобы лики (картинки) работали без сервера
+  // ----------------------------------------
   pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
   reactStrictMode: true,
   // Добавляем перечень узлов для сквозного прочтения

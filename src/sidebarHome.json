@@ -1,93 +1,93 @@
 {
-  "title": "React Docs",
+  "title": "Устав Расписывателя (React Docs)",
   "path": "/",
   "routes": [
     {
       "hasSectionHeader": true,
-      "sectionHeader": "GET STARTED"
+      "sectionHeader": "С ЧЕГО НАЧАТЬ"
     },
     {
-      "title": "Quick Start",
+      "title": "Быстрый зачин (Quick Start)",
       "path": "/learn"
     },
     {
-      "title": "Installation",
+      "title": "Устройство на месте (Installation)",
       "path": "/learn/installation"
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "LEARN REACT"
+      "sectionHeader": "ПОСТИЖЕНИЕ РАСПИСЫВАТЕЛЯ"
     },
     {
-      "title": "Describing the UI",
+      "title": "Очерк облика (Describing the UI)",
       "path": "/learn/describing-the-ui"
     },
     {
-      "title": "Adding Interactivity",
+      "title": "Добавление живости (Adding Interactivity)",
       "path": "/learn/adding-interactivity"
     },
     {
-      "title": "Managing State",
+      "title": "Правление запасом (Managing State)",
       "path": "/learn/managing-state"
     },
     {
-      "title": "Escape Hatches",
+      "title": "Запасные выходы (Escape Hatches)",
       "path": "/learn/escape-hatches"
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "REACT API"
+      "sectionHeader": "ПРАВИЛА ПРИЛИЧИЯ РАСПИСЫВАТЕЛЯ"
     },
     {
-      "title": "Hooks",
+      "title": "Приёмы (Hooks)",
       "path": "/reference/react"
     },
     {
-      "title": "Components",
+      "title": "Составные части (Components)",
       "path": "/reference/react/components"
     },
     {
-      "title": "APIs",
+      "title": "Посредники (APIs)",
       "path": "/reference/react/apis"
     },
     {
-      "title": "Legacy APIs",
+      "title": "Забытые посредники (Legacy APIs)",
       "path": "/reference/react/legacy"
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "REACT DOM API"
+      "sectionHeader": "ПРАВИЛА ПРИЛИЧИЯ ОБОЛОЧКИ (DOM)"
     },
     {
-      "title": "Components",
+      "title": "Составные части (Components)",
       "path": "/reference/react-dom/components"
     },
     {
-      "title": "APIs",
+      "title": "Посредники (APIs)",
       "path": "/reference/react-dom"
     },
     {
-      "title": "Client APIs",
+      "title": "Посредники у гостя (Client APIs)",
       "path": "/reference/react-dom/client"
     },
     {
-      "title": "Server APIs",
+      "title": "Посредники на сервере (Server APIs)",
       "path": "/reference/react-dom/server"
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "GET INVOLVED"
+      "sectionHeader": "ПРИСОЕДИНЯЙСЯ"
     },
     {
-      "title": "React Community",
+      "title": "Мир Расписывателя (Community)",
       "path": "/community"
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "STAY INFORMED"
+      "sectionHeader": "БУДЬ В КУРСЕ"
     },
     {
-      "title": "React Blog",
+      "title": "Летопись Расписывателя (Blog)",
       "path": "/blog"
     }
   ]

@@ -1,62 +1,64 @@
 ---
-title: "Introducing react.dev"
-author: Dan Abramov and Rachel Nabors
+title: "Представляем react.dev"
+author: Дан Абрамов и Рашель Наборс
 date: 2023/03/16
-description: Today we are thrilled to launch react.dev, the new home for React and its documentation. In this post, we would like to give you a tour of the new site.
+description: Сегодня мы с трепетом запускаем react.dev — новый дом для Расписывателя и его устава. В этой грамоте мы желаем провести для тебя прогулку по новому подворью.
 ---
 
-March 16, 2023 by [Dan Abramov](https://bsky.app/profile/danabra.mov) and [Rachel Nabors](https://twitter.com/rachelnabors)
+16 марта 2023 г., [Дан Абрамов](https://bsky.app/profile/danabra.mov) и [Рашель Наборс](https://twitter.com/rachelnabors)
 
 ---
 
 <Intro>
 
-Today we are thrilled to launch [react.dev](https://react.dev), the new home for React and its documentation. In this post, we would like to give you a tour of the new site.
+Сегодня мы с трепетом запускаем [react.dev](https://react.dev) — новый дом для **Расписывателя** (React) и его устава (документации). В этой грамоте мы желаем провести для тебя прогулку по новому подворью.
 
 </Intro>
 
 ---
 
-## tl;dr {/*tldr*/}
+## Вкратце {/*tldr*/}
 
-* The new React site ([react.dev](https://react.dev)) teaches modern React with function components and Hooks.
-* We've included diagrams, illustrations, challenges, and over 600 new interactive examples.
-* The previous React documentation site has now moved to [legacy.reactjs.org](https://legacy.reactjs.org).
+* Новое подворье **Расписывателя** ([react.dev](https://react.dev)) обучает современному письму через части-дела (функции) и особые Приёмы (Хуки).
+* Мы добавили чертежи, лики, испытания и более 600 новых живых примеров.
+* Прежнее подворье с уставом теперь переехало на [legacy.reactjs.org](https://legacy.reactjs.org).
 
-## New site, new domain, new homepage {/*new-site-new-domain-new-homepage*/}
+## Новое подворье, новое имя, новый зачин {/*new-site-new-domain-new-homepage*/}
 
-First, a little bit of housekeeping.
+Для начала — немного хозяйственных вестей.
 
-To celebrate the launch of the new docs and, more importantly, to clearly separate the old and the new content, we've moved to the shorter [react.dev](https://react.dev) domain. The old [reactjs.org](https://reactjs.org) domain will now redirect here.
+Дабы отпраздновать запуск нового устава и, что важнее, чётко отделить былые труды от новых, мы переехали на краткое имя [react.dev](https://react.dev). Старое имя [reactjs.org](https://reactjs.org) теперь будет приводить тебя сюда.
 
-The old React docs are now archived at [legacy.reactjs.org](https://legacy.reactjs.org). All existing links to the old content will automatically redirect there to avoid "breaking the web", but the legacy site will not get many more updates.
+Ветхие уставы **Расписывателя** ныне сокрыты в архиве на [legacy.reactjs.org](https://legacy.reactjs.org). Все старые связи (ссылки) будут сами направлять туда, дабы не «ломать мировую сеть», но обновляться то ветхое подворье более не будет.
 
-Believe it or not, React will soon be ten years old. In JavaScript years, it's like a whole century! We've [refreshed the React homepage](https://react.dev) to reflect why we think React is a great way to create user interfaces today, and updated the getting started guides to more prominently mention modern React-based frameworks.
+Верь или нет, но **Расписывателю** скоро исполнится десять лет. В годах Свода Жизни (JavaScript) это целое столетие! Мы [обновили заглавную страницу](https://react.dev), дабы явить, почему мы считаем **Расписыватель** добрым способом созидать облик для гостя сегодня, и поправили руководства для новичков, выделив современные основы (фреймворки).
 
-If you haven't seen the new homepage yet, check it out!
+Если ты ещё не зрел новый зачин — взгляни!
 
-## Going all-in on modern React with Hooks {/*going-all-in-on-modern-react-with-hooks*/}
+## Полный переход на современный Расписыватель с Приёмами {/*going-all-in-on-modern-react-with-hooks*/}
 
-When we released React Hooks in 2018, the Hooks docs assumed the reader is familiar with class components. This helped the community adopt Hooks very swiftly, but after a while the old docs failed to serve the new readers. New readers had to learn React twice: once with class components and then once again with Hooks.
+Когда в 2018 году мы явили миру особые Приёмы (Хуки), те правила полагали, что читатель уже знаком с сословиями (классами). Это помогло миру быстро принять Приёмы, но со временем старый устав перестал служить новым читателям. Им приходилось учить **Расписыватель** дважды: сначала через сословия, а затем снова через Приёмы.
 
-**The new docs teach React with Hooks from the beginning.** The docs are divided in two main sections:
+**Новый устав обучает Расписывателю через Приёмы с самого начала.** Весь устав поделен на две главные части:
 
-* **[Learn React](/learn)** is a self-paced course that teaches React from scratch.
-* **[API Reference](/reference)** provides the details and usage examples for every React API.
+* **[Постижение Расписывателя](/learn)** — это путь для самоличного прохождения, обучающий делу с чистого листа.
+* **[Справочник Посредников](/reference)** — даёт все подробности и примеры использования для каждого **Посредника** (API) Расписывателя.
 
-Let's have a closer look at what you can find in each section.
+Давай присмотримся поближе к тому, что можно найти в каждой части.
 
 <Note>
 
-There are still a few rare class component use cases that do not yet have a Hook-based equivalent. Class components remain supported, and are documented in the [Legacy API](/reference/react/legacy) section of the new site.
+Всё ещё остаются редкие случаи использования сословий (классов), у которых нет замены через Приёмы. Сословия по-прежнему поддерживаются и описаны в разделе [Забытые Посредники](/reference/react/legacy) на новом подворье.
 
 </Note>
 
-## Quick start {/*quick-start*/}
 
-The Learn section begins with the [Quick Start](/learn) page. It is a short introductory tour of React. It introduces the syntax for concepts like components, props, and state, but doesn't go into much detail on how to use them.
+## Быстрый зачин {/*quick-start*/}
 
-If you like to learn by doing, we recommend checking out the [Tic-Tac-Toe Tutorial](/learn/tutorial-tic-tac-toe) next. It walks you through building a little game with React, while teaching the skills you'll use every day. Here's what you'll build:
+Раздел «Постижение» открывается страницей [Быстрый зачин](/learn). Это краткая прогулка по миру **Расписывателя** (React). Она знакомит с правилами письма (синтаксисом) для таких понятий, как составные части, **настройки** (пропсы) и данные из хранилищ (состояние), но не вдаётся в глубокие подробности их использования.
+
+Если тебе любо постигать через дело, мы советуем следом заглянуть в [Поучение: Крестики-нолики](/learn/tutorial-tic-tac-toe). Оно проведёт тебя через созидание небольшой забавы на **Расписывателе**, обучая умениям, которые пригодятся тебе в каждом будничном деле. Вот что ты возведёшь:
+
 
 <Sandpack>
 
@@ -225,43 +227,46 @@ body {
 
 </Sandpack>
 
-We'd also like to highlight [Thinking in React](/learn/thinking-in-react)—that's the tutorial that made React "click" for many of us. **We've updated both of these classic tutorials to use function components and Hooks,** so they're as good as new.
+Мы также желаем выделить наставление [«Мыслим в духе Расписывателя»](/learn/thinking-in-react) — именно оно заставило всё «встать на свои места» для многих из нас. **Мы обновили оба этих классических поучения, чтобы в них использовались части-дела (функции) и особые Приёмы (Хуки),** так что они теперь как новенькие.
 
 <Note>
 
-The example above is a *sandbox*. We've added a lot of sandboxes—over 600!—everywhere throughout the site. You can edit any sandbox, or press "Fork" in the upper right corner to open it in a separate tab. Sandboxes let you quickly play with the React APIs, explore your ideas, and check your understanding.
+Пример выше — это *песочница*. Мы добавили множество таких песочниц — более 600! — по всему нашему подворью. Ты можешь править любую из них или нажать «Раздвоить» (Fork) в верхнем правом углу, дабы открыть её в отдельной вкладке. Песочницы позволяют тебе быстро играть с **Посредниками** (APIs) Расписывателя, изведывать свои задумки и проверять своё понимание.
 
 </Note>
 
-## Learn React step by step {/*learn-react-step-by-step*/}
 
-We'd like everyone in the world to have an equal opportunity to learn React for free on their own.
+## Постигай Расписыватель шаг за шагом {/*learn-react-step-by-step*/}
 
-This is why the Learn section is organized like a self-paced course split into chapters. The first two chapters describe the fundamentals of React. If you're new to React, or want to refresh it in your memory, start here:
+Мы желаем, чтобы у каждого в мире была равная возможность безвозмездно и самостоятельно обучиться **Расписывателю**.
 
-- **[Describing the UI](/learn/describing-the-ui)** teaches how to display information with components.
-- **[Adding Interactivity](/learn/adding-interactivity)** teaches how to update the screen in response to user input.
+Посему раздел «Обучение» устроен как путь для самоличного прохождения, поделенный на главы. Первые две главы повествуют об основах **Расписывателя**. Если ты только начинаешь знакомство или хочешь освежить былое в памяти, начни здесь:
 
-The next two chapters are more advanced, and will give you a deeper insight into the trickier parts:
+- **[Очерк облика](/learn/describing-the-ui)** научит, как являть данные с помощью составных частей.
+- **[Добавление живости](/learn/adding-interactivity)** научит, как обновлять экран в ответ на действия гостя.
 
-- **[Managing State](/learn/managing-state)** teaches how to organize your logic as your app grows in complexity.
-- **[Escape Hatches](/learn/escape-hatches)** teaches how you can "step outside" React, and when it makes most sense to do so.
+Следующие две главы более мудрёные, они дадут тебе глубокое видение самых хитрых мест:
 
-Every chapter consists of several related pages. Most of these pages teach a specific skill or a technique—for example, [Writing Markup with JSX](/learn/writing-markup-with-jsx), [Updating Objects in State](/learn/updating-objects-in-state), or [Sharing State Between Components](/learn/sharing-state-between-components). Some of the pages focus on explaining an idea—like [Render and Commit](/learn/render-and-commit), or [State as a Snapshot](/learn/state-as-a-snapshot). And there are a few, like [You Might Not Need an Effect](/learn/you-might-not-need-an-effect), that share our suggestions based on what we've learned over these years.
+- **[Правление запасом](/learn/managing-state)** научит, как ладить с правилами, когда твоё дело становится сложнее.
+- **[Запасные выходы](/learn/escape-hatches)** научат, как можно «выйти за пределы» **Расписывателя** и когда это имеет наибольший смысл.
 
-You don't have to read these chapters as a sequence. Who has the time for this?! But you could. Pages in the Learn section only rely on concepts introduced by the earlier pages. If you want to read it like a book, go for it!
+ Каждая глава состоит из нескольких родственных страниц. Большинство из них обучают особому умению или приёму — к примеру, [Письмо разметки через JSX](/learn/writing-markup-with-jsx), [Обновление предметов в хранилище](/learn/updating-objects-in-state) или [Обмен данными между частями](/learn/sharing-state-between-components). Некоторые страницы поясняют саму мысль — как [Отрисовка и Передача](/learn/render-and-commit) или [Состояние как Снимок мига](/learn/state-as-a-snapshot). А есть и такие, как [Возможно, тебе не нужно Воздействие](/learn/you-might-not-need-an-effect), где мы делимся советами, основанными на нашем многолетнем опыте.
 
-### Check your understanding with challenges {/*check-your-understanding-with-challenges*/}
+Тебе вовсе не обязательно читать эти главы по порядку. У кого на это есть время?! Но ты можешь. Страницы в разделе «Обучение» опираются только на те понятия, что были явлены ранее. Если хочешь прочесть это как книгу — в добрый путь!
 
-Most pages in the Learn section end with a few challenges to check your understanding. For example, here are a few challenges from the page about [Conditional Rendering](/learn/conditional-rendering#challenges).
 
-You don't have to solve them right now! Unless you *really* want to.
+### Проверь своё понимание через испытания {/*check-your-understanding-with-challenges*/}
+
+Большинство страниц в разделе «Обучение» заканчиваются несколькими испытаниями, дабы проверить твоё понимание. К примеру, вот пара задач со страницы об [Условной отрисовке](/learn/conditional-rendering#challenges).
+
+Тебе не обязательно решать их прямо сейчас! Разве что тебе *очень* приспичило.
 
 <Challenges noTitle={true}>
 
-#### Show an icon for incomplete items with `? :` {/*show-an-icon-for-incomplete-items-with--*/}
+#### Яви знак для незавершённых дел через `? :` {/*show-an-icon-for-incomplete-items-with--*/}
 
-Use the conditional operator (`cond ? a : b`) to render a ❌ if `isPacked` isn’t `true`.
+Используй условный наказ (`условие ? а : б`), чтобы отрисовать ❌, если `isPacked` (уложено) не является истиной (`true`).
+
 
 <Sandpack>
 
@@ -339,15 +344,16 @@ export default function PackingList() {
 
 </Solution>
 
-#### Show the item importance with `&&` {/*show-the-item-importance-with-*/}
+#### Яви важность дела через `&&` {/*show-the-item-importance-with-*/}
 
-In this example, each `Item` receives a numerical `importance` prop. Use the `&&` operator to render "_(Importance: X)_" in italics, but only for items that have non-zero importance. Your item list should end up looking like this:
+В этом примере каждая часть страницы `Item` (Дело) получает числовую **Настройку** (пропс) `importance` (важность). Используй наказ `&&` (и), чтобы отрисовать *«(Важность: Х)»* курсивом, но только для тех дел, чья важность не равна нулю. Твой список дел в итоге должен выглядеть так:
 
-* Space suit _(Importance: 9)_
-* Helmet with a golden leaf
-* Photo of Tam _(Importance: 6)_
+* Космический скафандр *(Важность: 9)*
+* Шлем с золотым листом
+* Снимок Тэма *(Важность: 6)*
 
-Don't forget to add a space between the two labels!
+Не забудь добавить пробел между двумя надписями!
+
 
 <Sandpack>
 
@@ -387,7 +393,7 @@ export default function PackingList() {
 
 <Solution>
 
-This should do the trick:
+Это должно сработать (принести плоды):
 
 <Sandpack>
 
@@ -429,53 +435,55 @@ export default function PackingList() {
 
 </Sandpack>
 
-Note that you must write `importance > 0 && ...` rather than `importance && ...` so that if the `importance` is `0`, `0` isn't rendered as the result!
+Заметь, что тебе следует писать `importance > 0 && ...` (важность больше нуля), а не просто `importance && ...`, дабы в случае, если **важность** равна `0`, этот самый ноль не вывелся как итог на экран!
 
-In this solution, two separate conditions are used to insert a space between then name and the importance label. Alternatively, you could use a Fragment with a leading space: `importance > 0 && <> <i>...</i></>` or add a space immediately inside the `<i>`:  `importance > 0 && <i> ...</i>`.
+В этом решении используются два отдельных условия, чтобы вставить пробел между именем и меткой важности. В ином случае ты мог бы использовать **Зерно** (Fragment) с ведущим пробелом: `importance > 0 && <> <i>...</i></>` или добавить пробел прямо внутрь `<i>`: `importance > 0 && <i> ...</i>`.
 
 </Solution>
 
 </Challenges>
 
-Notice the "Show solution" button in the left bottom corner. It's handy if you want to check yourself!
+Обрати внимание на кнопку «Показать решение» в левом нижнем углу. Она сподручна, если ты хочешь проверить себя!
 
-### Build an intuition with diagrams and illustrations {/*build-an-intuition-with-diagrams-and-illustrations*/}
+### Настрой своё чутьё через чертежи и лики {/*build-an-intuition-with-diagrams-and-illustrations*/}
 
-When we couldn't figure out how to explain something with code and words alone, we've added diagrams that help provide some intuition. For example, here is one of the diagrams from [Preserving and Resetting State](/learn/preserving-and-resetting-state):
+Когда нам не хватало слов и кода, дабы пояснить суть дела, мы добавляли чертежи, что помогают настроить чутьё. К примеру, вот один из чертежей со страницы о [Сохранении и Сбросе запаса сведений (состояния)](/learn/preserving-and-resetting-state):
 
-<Diagram name="preserving_state_diff_same_pt1" height={350} width={794} alt="Diagram with three sections, with an arrow transitioning each section in between. The first section contains a React component labeled 'div' with a single child labeled 'section', which has a single child labeled 'Counter' containing a state bubble labeled 'count' with value 3. The middle section has the same 'div' parent, but the child components have now been deleted, indicated by a yellow 'proof' image. The third section has the same 'div' parent again, now with a new child labeled 'div', highlighted in yellow, also with a new child labeled 'Counter' containing a state bubble labeled 'count' with value 0, all highlighted in yellow.">
+<Diagram name="preserving_state_diff_same_pt1" height={350} width={794} alt="Чертеж с тремя частями. Первая содержит узел div с ребенком section, внутри которого живет Счётчик с запасом 3. Во второй части section удален. В третьей на месте section явился div с новым Счётчиком, чей запас равен 0.">
 
-When `section` changes to `div`, the `section` is deleted and the new `div` is added
+Когда `section` (секция) сменяется на `div` (блок), старая секция удаляется, и добавляется новый блок.
 
 </Diagram>
 
-You'll also see some illustrations throughout the docs--here's one of the [browser painting the screen](/learn/render-and-commit#epilogue-browser-paint):
+Ты также встретишь разные лики (иллюстрации) по всему уставу — вот один из них, где [обозреватель расцвечивает экран](/learn/render-and-commit#epilogue-browser-paint):
 
-<Illustration alt="A browser painting 'still life with card element'." src="/images/docs/illustrations/i_browser-paint.png" />
+<Illustration alt="Обозреватель рисует натюрморт с карточкой." src="/images/docs/illustrations/i_browser-paint.png" />
 
-We've confirmed with the browser vendors that this depiction is 100% scientifically accurate.
+Мы получили подтверждение от создателей обозревателей, что сие изображение на все 100% научно верно.
 
-## A new, detailed API Reference {/*a-new-detailed-api-reference*/}
 
-In the [API Reference](/reference/react), every React API now has a dedicated page. This includes all kinds of APIs:
+## Новый, подробный Справочник Посредников {/*a-new-detailed-api-reference*/}
 
-- Built-in Hooks like [`useState`](/reference/react/useState).
-- Built-in components like [`<Suspense>`](/reference/react/Suspense).
-- Built-in browser components like [`<input>`](/reference/react-dom/components/input).
-- Framework-oriented APIs like [`renderToPipeableStream`](/reference/react-dom/server/renderToReadableStream).
-- Other React APIs like [`memo`](/reference/react/memo).
+В [Справочнике Посредников](/reference/react) (API Reference) у каждого **Посредника** Расписывателя теперь есть своя страница. Это касается всех видов орудий:
 
-You'll notice that every API page is split into at least two segments: *Reference* and *Usage*.
+- Врождённые Приёмы, такие как [`useState`](/reference/react/useState) (установка запаса).
+- Врождённые части страницы, такие как [`<Suspense>`](/reference/react/Suspense) (ожидание).
+- Обычные части обозревателя, такие как [`<input>`](/reference/react-dom/components/input) (поле ввода).
+- Посредники для основ (фреймворков), такие как [`renderToPipeableStream`](/reference/react-dom/server/renderToReadableStream) (поточная отрисовка).
+- Иные орудия Расписывателя, такие как [`memo`](/reference/react/memo) (заповедная часть).
 
-[Reference](/reference/react/useState#reference) describes the formal API signature by listing its arguments and return values. It's concise, but it can feel a bit abstract if you're not familiar with that API. It describes what an API does, but not how to use it.
+Ты заметишь, что страница каждого Посредника поделена как минимум на две части: *Описание* (Reference) и *Применение* (Usage).
 
-[Usage](/reference/react/useState#usage) shows why and how you would use this API in practice, like a colleague or a friend might explain. It shows the **canonical scenarios for how each API was meant to be used by the React team.** We've added color-coded snippets, examples of using different APIs together, and recipes that you can copy and paste from:
+[Описание](/reference/react/useState#reference) даёт строгий очерк того, как выглядит орудие, перечисляя его доводы (аргументы) и то, что оно возвращает. Оно краткое, но может показаться туманным, если ты ещё не знаком с этим орудием. Оно говорит, что Посредник делает, но не как его обуздать.
 
-<Recipes titleText="Basic useState examples" titleId="examples-basic">
+[Применение](/reference/react/useState#usage) являет, зачем и как тебе использовать это орудие на деле — так, как поведал бы соратник или добрый друг. Оно открывает **верные случаи того, как каждый Посредник задумывался к использованию дружиной Расписывателя.** Мы добавили расцвеченные куски кода, примеры совместного труда разных орудий и готовые наказы (рецепты), кои ты можешь просто перенести к себе:
 
-#### Counter (number) {/*counter-number*/}
+<Recipes titleText="Простые примеры установки запаса" titleId="examples-basic">
 
-In this example, the `count` state variable holds a number. Clicking the button increments it.
+#### Счётчик (число) {/*counter-number*/}
+
+В этом примере в хранилище `count` (счёт) лежит число. Нажатие на кнопку прибавляет к нему единицу.
+
 
 <Sandpack>
 
@@ -607,42 +615,43 @@ button { display: block; margin-top: 10px; }
 
 </Recipes>
 
-Some API pages also include [Troubleshooting](/reference/react/useEffect#troubleshooting) (for common problems) and [Alternatives](/reference/react-dom/findDOMNode#alternatives) (for deprecated APIs).
+Некоторые страницы **Посредников** также включают разделы [Устранение неполадок](/reference/react/useEffect#troubleshooting) (для привычных бед) и [Иные пути](/reference-dom/findDOMNode#alternatives) (для забытых орудий).
 
-We hope that this approach will make the API reference useful not only as a way to look up an argument, but as a way to see all the different things you can do with any given API—and how it connects to the other ones.
+Мы надеемся, что такой подход сделает справочник полезным не только как способ подсмотреть довод (аргумент), но и как путь узреть всё многообразие дел, что можно сотворить с любым орудием — и как оно связано с остальными.
 
-## What's next? {/*whats-next*/}
+## Что дальше? {/*whats-next*/}
 
-That's a wrap for our little tour! Have a look around the new website, see what you like or don't like, and keep the feedback coming in our [issue tracker](https://github.com/reactjs/react.dev/issues).
+На этом наша малая прогулка окончена! Оглядись на новом подворье, примечай, что тебе любо, а что нет, и присылай свои вести в наш [список дел](https://github.com/reactjs/react.dev/issues).
 
-We acknowledge this project has taken a long time to ship. We wanted to maintain a high quality bar that the React community deserves. While writing these docs and creating all of the examples, we found mistakes in some of our own explanations, bugs in React, and even gaps in the React design that we are now working to address. We hope that the new documentation will help us hold React itself to a higher bar in the future.
+Мы признаём, что сей труд занял долгое время. Мы желали держать высокую планку качества, коей достойна вся дружина **Расписывателя**. Пока мы писали сей устав и созидали примеры, мы находили изъяны в собственных речах, ошибки в самом **Расписывателе** и даже пустоты в его устройстве, над коими ныне трудимся. Мы верим, что новый устав поможет нам в будущем держать и сам **Расписыватель** на недосягаемой высоте.
 
-We've heard many of your requests to expand the content and functionality of the website, for example:
+Мы вняли многим твоим прошениям о расширении подворья, к примеру:
 
-- Providing a TypeScript version for all examples;
-- Creating the updated performance, testing, and accessibility guides;
-- Documenting React Server Components independently from the frameworks that support them;
-- Working with our international community to get the new docs translated;
-- Adding missing features to the new website (for example, RSS for this blog).
+- Предоставление версии на **Образе действия** (TypeScript) для всех примеров;
+- Создание обновлённых руководств по скорости, проверке (тестированию) и доступности для всех гостей;
+- Описание **Серверных частей** отдельно от основ (фреймворков), что их поддерживают;
+- Труд с международной дружиной над переводом нового устава;
+- Добавление недостающих дел на само подворье (к примеру, вещание RSS для этой летописи).
 
-Now that [react.dev](https://react.dev/) is out, we will be able to shift our focus from "catching up" with the third-party React educational resources to adding new information and further improving our new website.
+Теперь, когда [react.dev](https://react.dev/) вышел в мир, мы сможем переключить внимание с «погони» за сторонними учителями на добавление новых вестей и дальнейшее украшение нашего подворья.
 
-We think there's never been a better time to learn React.
+Мы полагаем, что ныне — лучшее время, дабы постигать **Расписыватель**.
 
-## Who worked on this? {/*who-worked-on-this*/}
+## Кто трудился над сим? {/*who-worked-on-this*/}
 
-On the React team, [Rachel Nabors](https://twitter.com/rachelnabors/) led the project (and provided the illustrations), and [Dan Abramov](https://bsky.app/profile/danabra.mov) designed the curriculum. They co-authored most of the content together as well.
+В дружине **Расписывателя** [Рашель Наборс](https://twitter.com/rachelnabors/) вела сей проект (и создала лики-иллюстрации), а [Дан Абрамов](https://bsky.app/profile/danabra.mov) проложил путь обучения. Они же вместе составили большую часть писания.
 
-Of course, no project this large happens in isolation. We have a lot of people to thank!
+Разумеется, ни одно столь великое дело не вершится в одиночку. Нам есть за что благодарить многих людей!
 
-[Sylwia Vargas](https://twitter.com/SylwiaVargas) overhauled our examples to go beyond "foo/bar/baz" and kittens, and feature scientists, artists and cities from around the world. [Maggie Appleton](https://twitter.com/Mappletons) turned our doodles into a clear diagram system.
+[Сильвия Варгас](https://twitter.com/SylwiaVargas) переделала наши примеры, дабы уйти от пустых имен и котят к учёным, творцам и городам со всего света. [Мэгги Эпплтон](https://twitter.com/Mappletons) превратила наши наброски в стройную систему чертежей.
 
-Thanks to [David McCabe](https://twitter.com/mcc_abe), [Sophie Alpert](https://twitter.com/sophiebits), [Rick Hanlon](https://twitter.com/rickhanlonii), [Andrew Clark](https://twitter.com/acdlite), and [Matt Carroll](https://twitter.com/mattcarrollcode) for additional writing contributions. We'd also like to thank [Natalia Tepluhina](https://twitter.com/n_tepluhina) and [Sebastian Markbåge](https://twitter.com/sebmarkbage) for their ideas and feedback.
+Благодарим [Давида Маккейба](https://twitter.com/mcc_abe), [Софи Альперт](https://twitter.com/sophiebits), [Рика Хэнлона](https://twitter.com/rickhanlonii), [Эндрю Кларка](https://twitter.com/acdlite) и [Мэтта Кэрролла](https://twitter.com/mattcarrollcode) за их вклад в писание. Также благодарим [Наталью Теплухину](https://twitter.com/n_tepluhina) и [Себастьяна Маркбоге](https://twitter.com/sebmarkbage) за их мысли и советы.
 
-Thanks to [Dan Lebowitz](https://twitter.com/lebo) for the site design and [Razvan Gradinar](https://dribbble.com/GradinarRazvan) for the sandbox design.
+Спасибо [Дану Лебовицу](https://twitter.com/lebo) за облик подворья и [Раззану Градинару](https://dribbble.com/GradinarRazvan) за облик песочниц.
 
-On the development front, thanks to [Jared Palmer](https://twitter.com/jaredpalmer) for prototype development. Thanks to [Dane Grant](https://twitter.com/danecando) and [Dustin Goodman](https://twitter.com/dustinsgoodman) from [ThisDotLabs](https://www.thisdot.co/) for their support on UI development. Thanks to [Ives van Hoorne](https://twitter.com/CompuIves), [Alex Moldovan](https://twitter.com/alexnmoldovan), [Jasper De Moor](https://twitter.com/JasperDeMoor), and [Danilo Woznica](https://twitter.com/danilowoz) from [CodeSandbox](https://codesandbox.io/) for their work with sandbox integration. Thanks to [Rick Hanlon](https://twitter.com/rickhanlonii) for spot development and design work, finessing our colors and finer details. Thanks to [Harish Kumar](https://www.strek.in/) and [Luna Ruan](https://twitter.com/lunaruan) for adding new features to the site and helping maintain it.
+На поприще зодчества спасибо [Джареду Палмеру](https://twitter.com/jaredpalmer) за первые пробы. Благодарим [Дейна Гранта](https://twitter.com/danecando) и [Дастина Гудмана](https://twitter.com/dustinsgoodman) из [ThisDotLabs](https://www.thisdot.co/) за помощь в возведении облика. Спасибо [Ивсу ван Хоорну](https://twitter.com/CompuIves), [Алексу Молдовану](https://twitter.com/alexnmoldovan), [Джасперу Де Моору](https://twitter.com/JasperDeMoor) и [Данило Вознике](https://twitter.com/danilowoz) из [CodeSandbox](https://codesandbox.io/) за их труд над вложением песочниц. Спасибо [Рику Хэнлону](https://twitter.com/rickhanlonii) за правку цветов и мелких примет. Благодарим [Хариша Кумара](https://www.strek.in/) и [Луну Руан](https://twitter.com/lunaruan) за добавление новых дел на подворье и заботу о нём.
 
-Huge thanks to the folks who volunteered their time to participate in the alpha and beta testing program. Your enthusiasm and invaluable feedback helped us shape these docs. A special shout out to our beta tester, [Debbie O'Brien](https://twitter.com/debs_obrien), who gave a talk about her experience using the React docs at React Conf 2021.
+Огромное спасибо тем, кто безвозмездно отдал своё время, дабы испытать устав на ранних порах. Твоё рвение и бесценные вести помогли нам придать форму этому труду. Особая благодарность нашему испытателю [Дебби О'Брайен](https://twitter.com/debs_obrien), коя поведала о своём опыте работы с уставом на соборе React Conf 2021.
 
-Finally, thanks to the React community for being the inspiration behind this effort. You are the reason we do this, and we hope that the new docs will help you use React to build any user interface that you want.
+Наконец, благодарим всё **мирское сообщество Расписывателя** за то, что вдохновляли нас. Ты — причина, по которой мы вершим это, и мы надеемся, что новый устав поможет тебе использовать **Расписыватель** для созидания любого облика, коего ты пожелаешь.
+

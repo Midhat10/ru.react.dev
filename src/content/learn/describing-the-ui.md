@@ -1,30 +1,31 @@
 ---
-title: Describing the UI
+title: Очерк облика
 ---
 
 <Intro>
 
-React is a JavaScript library for rendering user interfaces (UI). UI is built from small units like buttons, text, and images. React lets you combine them into reusable, nestable *components.* From web sites to phone apps, everything on the screen can be broken down into components. In this chapter, you'll learn to create, customize, and conditionally display React components.
+**Расписыватель** (React) — это книжница правил Свода Жизни (JavaScript) для отрисовки облика, явленного гостю (UI). Облик возводится из малых звеньев: кнопок, писем и ликов. **Расписыватель** позволяет сочетать их в годные для повтора и вложенные друг в друга *составные части* (компоненты). От сетевых подворий до приложений в телефоне — всё на экране можно разобрать на такие части. В этой главе ты научишься созидать, обряжать и по условию являть части страницы.
 
 </Intro>
 
 <YouWillLearn isChapter={true}>
 
-* [How to write your first React component](/learn/your-first-component)
-* [When and how to create multi-component files](/learn/importing-and-exporting-components)
-* [How to add markup to JavaScript with JSX](/learn/writing-markup-with-jsx)
-* [How to use curly braces with JSX to access JavaScript functionality from your components](/learn/javascript-in-jsx-with-curly-braces)
-* [How to configure components with props](/learn/passing-props-to-a-component)
-* [How to conditionally render components](/learn/conditional-rendering)
-* [How to render multiple components at a time](/learn/rendering-lists)
-* [How to avoid confusing bugs by keeping components pure](/learn/keeping-components-pure)
-* [Why understanding your UI as trees is useful](/learn/understanding-your-ui-as-a-tree)
+* [Как сотворить свою первую часть страницы](/learn/your-first-component)
+* [Когда и как заводить свитки с множеством частей](/learn/importing-and-exporting-components)
+* [Как добавить разметку в Свод Жизни через Живое Письмо (JSX)](/learn/writing-markup-with-jsx)
+* [Как через узорные скобки в Живом Письме взывать к силе Свода Жизни](/learn/javascript-in-jsx-with-curly-braces)
+* [Как обряжать части страницы через Настройки (пропсы)](/learn/passing-props-to-a-component)
+* [Как являть части страницы по условию](/learn/conditional-rendering)
+* [Как отрисовать множество частей разом](/learn/rendering-lists)
+* [Как избежать досадных бед, сохраняя части страницы чистыми](/learn/keeping-components-pure)
+* [Почему полезно видеть свой облик как Древо связей](/learn/understanding-your-ui-as-a-tree)
 
 </YouWillLearn>
 
-## Your first component {/*your-first-component*/}
+## Твоя первая часть страницы {/*your-first-component*/}
 
-React applications are built from isolated pieces of UI called *components*. A React component is a JavaScript function that you can sprinkle with markup. Components can be as small as a button, or as large as an entire page. Here is a `Gallery` component rendering three `Profile` components:
+Дела на **Расписывателе** возводятся из отдельных лоскутов облика, зовущихся *составными частями*. Часть страницы — это дело (функция) Свода Жизни, в которое ты можешь вплести разметку. Части могут быть крохотными, как кнопка, или великими, как целая страница. Вот часть `Gallery` (Галерея), отрисовывающая три части `Profile` (Лик пользователя):
+
 
 <Sandpack>
 

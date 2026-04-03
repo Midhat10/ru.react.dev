@@ -1,0 +1,41 @@
+name: Поставить справочник Спутником в мир
+
+on:
+  push:
+    branches: ['main'] # Убедись, что твой главный корень зовется именно так
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Взять код
+        uses: actions/checkout@v4
+
+      - name: Устроить Свод Жизни (Node.js)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn' # У тебя в ларце лежит yarn.lock, значит используем Yarn
+
+      - name: Собрать припасы
+        run: yarn install --frozen-lockfile
+
+      - name: Сборка Спутником (Next.js)
+        run: yarn build
+        # Напоминаю: в next.config.js должен быть output: 'export'
+
+      - name: Настройка страниц
+        uses: actions/configure-pages@v4
+
+      - name: Загрузить готовые свитки
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './out' # Спутник складывает плоды в папку out
+
+      - name: Явить миру на Гитхаб-страницах
+        uses: actions/deploy-pages@v4
