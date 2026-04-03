@@ -15,71 +15,71 @@
       "path": "/reference/react/hooks",
       "routes": [
         {
-          "title": "useActionState",
+          "title": "useActionState — применить_состояние_дела",
           "path": "/reference/react/useActionState"
         },
         {
-          "title": "useCallback",
+          "title": "useCallback — запомнить_дело",
           "path": "/reference/react/useCallback"
         },
         {
-          "title": "useContext",
+          "title": "useContext — внять_окружению",
           "path": "/reference/react/useContext"
         },
         {
-          "title": "useDebugValue",
+          "title": "useDebugValue — явить_значение_правщику",
           "path": "/reference/react/useDebugValue"
         },
         {
-          "title": "useDeferredValue",
+          "title": "useDeferredValue — отложить_значение",
           "path": "/reference/react/useDeferredValue"
         },
         {
-          "title": "useEffect",
+          "title": "useEffect — сопутствующее_действие",
           "path": "/reference/react/useEffect"
         },
         {
-          "title": "useId",
+          "title": "useId — получить_имя_собственное",
           "path": "/reference/react/useId"
         },
         {
-          "title": "useImperativeHandle",
+          "title": "useImperativeHandle — настроить_ручное_управление",
           "path": "/reference/react/useImperativeHandle"
         },
         {
-          "title": "useInsertionEffect",
+          "title": "useInsertionEffect — воздействие_при_вставке_стилей",
           "path": "/reference/react/useInsertionEffect"
         },
         {
-          "title": "useLayoutEffect",
+          "title": "useLayoutEffect — воздействие_перед_отрисовкой",
           "path": "/reference/react/useLayoutEffect"
         },
         {
-          "title": "useMemo",
+          "title": "useMemo — запомнить_значение",
           "path": "/reference/react/useMemo"
         },
         {
-          "title": "useOptimistic",
+          "title": "useOptimistic — надеяться_на_лучшее",
           "path": "/reference/react/useOptimistic"
         },
         {
-          "title": "useReducer",
+          "title": "useReducer — править_через_уклад",
           "path": "/reference/react/useReducer"
         },
         {
-          "title": "useRef",
+          "title": "useRef — верная_ссылка",
           "path": "/reference/react/useRef"
         },
         {
-          "title": "useState",
+          "title": "useState — установка_запаса_сведений",
           "path": "/reference/react/useState"
         },
         {
-          "title": "useSyncExternalStore",
+          "title": "useSyncExternalStore — связь_с_чужим_хранилищем",
           "path": "/reference/react/useSyncExternalStore"
         },
         {
-          "title": "useTransition",
+          "title": "useTransition — плавный_переход",
           "path": "/reference/react/useTransition"
         }
       ]
@@ -97,7 +97,7 @@
           "path": "/reference/react/Profiler"
         },
         {
-          "title": "Строгий устав (<StrictMode>)",
+          "title": "Строгий уклад (<StrictMode>)",
           "path": "/reference/react/StrictMode"
         },
         {
@@ -105,65 +105,65 @@
           "path": "/reference/react/Suspense"
         },
         {
-          "title": "<Activity>",
+          "title": "Живучесть (<Activity>)",
           "path": "/reference/react/Activity",
           "version": "experimental"
         },
         {
-          "title": "<ViewTransition>",
+          "title": "Переход (<ViewTransition>)",
           "path": "/reference/react/ViewTransition",
           "version": "experimental"
         }
       ]
     },
     {
-      "title": "Дела (APIs)",
+      "title": "Посредники (APIs)",
       "path": "/reference/react/apis",
       "routes": [
         {
-          "title": "act",
+          "title": "Действие (act)",
           "path": "/reference/react/act"
         },
         {
-          "title": "cache",
+          "title": "Запасник (cache)",
           "path": "/reference/react/cache"
         },
         {
-          "title": "captureOwnerStack",
+          "title": "Слепок корней (captureOwnerStack)",
           "path": "/reference/react/captureOwnerStack"
         },
         {
-          "title": "createContext",
+          "title": "Зачин окружения (createContext)",
           "path": "/reference/react/createContext"
         },
         {
-          "title": "lazy",
+          "title": "Ленивая часть (lazy)",
           "path": "/reference/react/lazy"
         },
         {
-          "title": "memo",
+          "title": "Заповедная часть (memo)",
           "path": "/reference/react/memo"
         },
         {
-          "title": "startTransition",
+          "title": "Запуск перехода (startTransition)",
           "path": "/reference/react/startTransition"
         },
         {
-          "title": "use",
+          "title": "Взять (use)",
           "path": "/reference/react/use"
         },
         {
-          "title": "experimental_taintObjectReference",
+          "title": "Метка запрета (experimental_taintObjectReference)",
           "path": "/reference/react/experimental_taintObjectReference",
           "version": "experimental"
         },
         {
-          "title": "experimental_taintUniqueValue",
+          "title": "Метка тайны (experimental_taintUniqueValue)",
           "path": "/reference/react/experimental_taintUniqueValue",
           "version": "experimental"
         },
         {
-          "title": "unstable_addTransitionType",
+          "title": "Вид перехода (unstable_addTransitionType)",
           "path": "/reference/react/addTransitionType",
           "version": "experimental"
         }
@@ -178,7 +178,7 @@
       "path": "/reference/react-dom/hooks",
       "routes": [
         {
-          "title": "useFormStatus",
+          "title": "Состояние бланка (useFormStatus)",
           "path": "/reference/react-dom/hooks/useFormStatus"
         }
       ]
@@ -188,229 +188,229 @@
       "path": "/reference/react-dom/components",
       "routes": [
         {
-          "title": "Common (e.g. <div>)",
+          "title": "Обычные (напр. <div>)",
           "path": "/reference/react-dom/components/common"
         },
         {
-          "title": "<form>",
+          "title": "Бланк (<form>)",
           "path": "/reference/react-dom/components/form"
         },
         {
-          "title": "<input>",
+          "title": "Поле ввода (<input>)",
           "path": "/reference/react-dom/components/input"
         },
         {
-          "title": "<option>",
+          "title": "Предложение (<option>)",
           "path": "/reference/react-dom/components/option"
         },
         {
-          "title": "<progress>",
+          "title": "Полоса успеха (<progress>)",
           "path": "/reference/react-dom/components/progress"
         },
         {
-          "title": "<select>",
+          "title": "Поле выбора (<select>)",
           "path": "/reference/react-dom/components/select"
         },
         {
-          "title": "<textarea>",
+          "title": "Область письма (<textarea>)",
           "path": "/reference/react-dom/components/textarea"
         },
         {
-          "title": "<link>",
+          "title": "Связь (<link>)",
           "path": "/reference/react-dom/components/link"
         },
         {
-          "title": "<meta>",
+          "title": "Примета (<meta>)",
           "path": "/reference/react-dom/components/meta"
         },
         {
-          "title": "<script>",
+          "title": "Указ (<script>)",
           "path": "/reference/react-dom/components/script"
         },
         {
-          "title": "<style>",
+          "title": "Наряд (<style>)",
           "path": "/reference/react-dom/components/style"
         },
         {
-          "title": "<title>",
+          "title": "Зачин (<title>)",
           "path": "/reference/react-dom/components/title"
         }
       ]
     },
     {
-      "title": "APIs",
+      "title": "Посредники",
       "path": "/reference/react-dom",
       "routes": [
         {
-          "title": "createPortal",
+          "title": "Выносной проём (createPortal)",
           "path": "/reference/react-dom/createPortal"
         },
         {
-          "title": "flushSync",
+          "title": "Срочный наказ (flushSync)",
           "path": "/reference/react-dom/flushSync"
         },
         {
-          "title": "preconnect",
+          "title": "Предсообщение (preconnect)",
           "path": "/reference/react-dom/preconnect"
         },
         {
-          "title": "prefetchDNS",
+          "title": "Предразведка (prefetchDNS)",
           "path": "/reference/react-dom/prefetchDNS"
         },
         {
-          "title": "preinit",
+          "title": "Предзачин (preinit)",
           "path": "/reference/react-dom/preinit"
         },
         {
-          "title": "preinitModule",
+          "title": "Предзачин набора (preinitModule)",
           "path": "/reference/react-dom/preinitModule"
         },
         {
-          "title": "preload",
+          "title": "Предзагрузка (preload)",
           "path": "/reference/react-dom/preload"
         },
         {
-          "title": "preloadModule",
+          "title": "Предзагрузка набора (preloadModule)",
           "path": "/reference/react-dom/preloadModule"
         }
       ]
     },
     {
-      "title": "Client APIs",
+      "title": "Посредники у гостя (Client)",
       "path": "/reference/react-dom/client",
       "routes": [
         {
-          "title": "createRoot",
+          "title": "Зачин корня (createRoot)",
           "path": "/reference/react-dom/client/createRoot"
         },
         {
-          "title": "hydrateRoot",
+          "title": "Оживление корня (hydrateRoot)",
           "path": "/reference/react-dom/client/hydrateRoot"
         }
       ]
     },
     {
-      "title": "Server APIs",
+      "title": "Посредники на сервере (Server)",
       "path": "/reference/react-dom/server",
       "routes": [
         {
-          "title": "renderToPipeableStream",
+          "title": "Поточная отрисовка (renderToPipeableStream)",
           "path": "/reference/react-dom/server/renderToPipeableStream"
         },
         {
-          "title": "renderToReadableStream",
+          "title": "Чтимая отрисовка (renderToReadableStream)",
           "path": "/reference/react-dom/server/renderToReadableStream"
         },
         {
-          "title": "renderToStaticMarkup",
+          "title": "Мёртвая разметка (renderToStaticMarkup)",
           "path": "/reference/react-dom/server/renderToStaticMarkup"
         },
         {
-          "title": "renderToString",
+          "title": "Отрисовка в строку (renderToString)",
           "path": "/reference/react-dom/server/renderToString"
         }
       ]
     },
     {
-      "title": "Static APIs",
+      "title": "Неподвижные Посредники (Static)",
       "path": "/reference/react-dom/static",
       "routes": [
         {
-          "title": "prerender",
+          "title": "Предварительный зачин (prerender)",
           "path": "/reference/react-dom/static/prerender"
         },
         {
-          "title": "prerenderToNodeStream",
+          "title": "Поточный предзачин (prerenderToNodeStream)",
           "path": "/reference/react-dom/static/prerenderToNodeStream"
         }
       ]
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "Rules of React"
+      "sectionHeader": "Уставы Расписывателя (Rules of React)"
     },
     {
-      "title": "Overview",
+      "title": "Общий взгляд",
       "path": "/reference/rules",
       "routes": [
         {
-          "title": "Components and Hooks must be pure",
+          "title": "Части страницы и подключения должны быть чистыми",
           "path": "/reference/rules/components-and-hooks-must-be-pure"
         },
         {
-          "title": "React calls Components and Hooks",
+          "title": "Расписыватель сам призывает Части и подключения",
           "path": "/reference/rules/react-calls-components-and-hooks"
         },
         {
-          "title": "Rules of Hooks",
+          "title": "Правила особых подключений (Rules of Hooks)",
           "path": "/reference/rules/rules-of-hooks"
         }
       ]
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "React Server Components"
+      "sectionHeader": "Серверные части Расписывателя (React Server Components)"
     },
     {
-      "title": "Server Components",
+      "title": "Серверные части",
       "path": "/reference/rsc/server-components"
     },
     {
-      "title": "Server Functions",
+      "title": "Серверные дела (Server Functions)",
       "path": "/reference/rsc/server-functions"
     },
     {
-      "title": "Directives",
+      "title": "Указания (Directives)",
       "path": "/reference/rsc/directives",
       "routes": [
         {
-          "title": "'use client'",
+          "title": "«У гостя» ('use client')",
           "path": "/reference/rsc/use-client"
         },
         {
-          "title": "'use server'",
+          "title": "«На сервере» ('use server')",
           "path": "/reference/rsc/use-server"
         }
       ]
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "Legacy APIs"
+      "sectionHeader": "Забытые Посредники (Legacy APIs)"
     },
     {
-      "title": "Legacy React APIs",
+      "title": "Забытые Посредники (Legacy React APIs)",
       "path": "/reference/react/legacy",
       "routes": [
         {
-          "title": "Children",
+          "title": "Дети (Children)",
           "path": "/reference/react/Children"
         },
         {
-          "title": "cloneElement",
+          "title": "Слепок части (cloneElement)",
           "path": "/reference/react/cloneElement"
         },
         {
-          "title": "Component",
+          "title": "Сословие (Component)",
           "path": "/reference/react/Component"
         },
         {
-          "title": "createElement",
+          "title": "Зачин части (createElement)",
           "path": "/reference/react/createElement"
         },
         {
-          "title": "createRef",
+          "title": "Зачин ссылки (createRef)",
           "path": "/reference/react/createRef"
         },
         {
-          "title": "forwardRef",
+          "title": "Передача ссылки (forwardRef)",
           "path": "/reference/react/forwardRef"
         },
         {
-          "title": "isValidElement",
+          "title": "Проверка на подлинность (isValidElement)",
           "path": "/reference/react/isValidElement"
         },
         {
-          "title": "PureComponent",
+          "title": "Чистое сословие (PureComponent)",
           "path": "/reference/react/PureComponent"
         }
       ]

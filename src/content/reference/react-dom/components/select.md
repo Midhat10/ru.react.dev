@@ -34,37 +34,38 @@ title: "<select>"
 
 [См. больше примеров ниже.](#usage)
 
-#### Пропсы {/*props*/}
+#### Наказы (пропсы) {/*props*/}
 
-`<select>` поддерживает все [общие пропсы HTML-элементов.](/reference/react-dom/components/common#props)
+`<select>` (поле выбора) поддерживает все [общие наказы для элементов Живой Разметки.](/reference/react-dom/components/common#props)
 
-Можно сделать [поле выбора управляемым](#controlling-a-select-box-with-a-state-variable), передав проп `value`:
+Можно сделать [поле выбора управляемым](#controlling-a-select-box-with-a-state-variable), передав наказ `value` (значение):
 
-* `value`: строка (или массив строк для [`multiple={true}`](#enabling-multiple-selection)). Управляет выбранным вариантом. Значение каждой строки `value` соответствует некоторому `<option>`, вложенному в `<select>`.
+* `value`: строка (или список строк для [`multiple={true}`](#enabling-multiple-selection)). Правит выбранным вариантом. Каждая строка в `value` должна соответствовать какому-то `<option>` (выбору), вложенному в поле.
 
-При передаче `value`, также необходимо передать обработчик `onChange`, который будет отвечать за обновление переданного значения.
+При передаче `value` также необходимо приставить **обработчик** `onChange` (при перемене), который будет отвечать за обновление данных в хранилище.
 
-Если не передать `value`, то `<select>` считается неуправляемым, и нужно использовать проп `defaultValue`:
+Если не передать `value`, то поле выбора считается неуправляемым, и нужно использовать наказ `defaultValue`:
 
-* `defaultValue`: строка (или массив строк для [`multiple={true}`](#enabling-multiple-selection)). Указывает [значение по умолчанию.](#providing-an-initially-selected-option)
+* `defaultValue`: строка (или список строк для [`multiple={true}`](#enabling-multiple-selection)). Указывает [значение по умолчанию (изначальное).](#providing-an-initially-selected-option)
 
-Эти пропсы `<select>` актуальны для неуправляемых и управляемых полей выбора:
+Эти наказы актуальны как для вольных, так и для подвластных полей выбора:
 
-* [`autoComplete`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#autocomplete): строка. Указывает одно из возможных [поведений автозаполнения.](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#values)
-* [`autoFocus`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#autofocus): булево значение. Если `true`, React установит фокус на элемент при монтировании.
-* `children`: `<select>` принимает компоненты [`<option>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/option), [`<optgroup>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/optgroup) и [`<datalist>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/datalist) в качестве дочерних. Вы также можете передать свои собственные компоненты, но только в том случае, если в конечном итоге они рендерят один из вышеперечисленных компонентов. Если ваши компоненты рендерят теги `<option>`, то каждый отрендеренный `<option>` должен содержать `value`.
-* [`disabled`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#disabled): булево значение. Если `true`, то поле выбора не будет интерактивным и будет отображаться затемнённым.
-* [`form`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#form): строка. Указывает `id` для тега `<form>`, к которому относится поле выбора. Если значение не указано, то поле выбора будет относиться к ближайшей родительской форме.
-* [`multiple`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#multiple): булево значение. Если `true`, то браузер будет поддерживать возможность [множественного выбора.](#enabling-multiple-selection)
-* [`name`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#name): строка. Указывает имя для поля выбора, которое [отправляется вместе с формой.](#reading-the-select-box-value-when-submitting-a-form)
-* `onChange`: функция [обработчика `Event`](/reference/react-dom/components/common#event-handler). Требуется для [управляемых полей выбора.](#controlling-a-select-box-with-a-state-variable) Немедленно срабатывает, когда пользователь выбирает другой вариант. Ведёт себя как [событие `input`](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/input_event) в браузере.
-* `onChangeCapture`: Вариант `onChange`, который срабатывает на [этапе захвата события.](/learn/responding-to-events#capture-phase-events)
-* [`onInput`](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/input_event): функция [обработчика `Event`](/reference/react-dom/components/common#event-handler). Немедленно срабатывает, когда пользователь меняет значение. По историческим причинам в React принято использовать вместо этого `onChange`, который работает аналогичным образом.
-* `onInputCapture`: Вариант `onInput`, который срабатывает на [этапе захвата события.](/learn/responding-to-events#capture-phase-events)
-* [`onInvalid`](https://developer.mozilla.org/ru/docs/Web/API/HTMLInputElement/invalid_event): функция [обработчика `Event`](/reference/react-dom/components/common#event-handler). Срабатывает в том случае, если введённые данные не прошли валидацию при отправке формы. В отличии от встроенного события `invalid`, в React событие `onInvalid` всплывает.
-* `onInvalidCapture`: Вариант `onInvalid`, который срабатывает на [этапе захвата события.](/learn/responding-to-events#capture-phase-events)
-* [`required`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#required): булево значение. Если `true`, то необходимо указать значение для отправки формы.
-* [`size`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#size): число. Для `multiple={true}` указывает количество изначально видимых элементов.
+* [`autoComplete`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#autocomplete): строка. Указывает способ [самозаполнения.](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#values)
+* [`autoFocus`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#autofocus): да/нет (булево). Если истинно (`true`), **Расписыватель** наведет внимание на поле при рождении.
+* `children` (дети): поле выбора принимает внутрь себя части [`<option>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/option), [`<optgroup>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/optgroup) и [`<datalist>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/datalist). Ты можешь передать и свои части страницы, но только если в итоге они отрисовывают что-то из этого списка. Каждое конечное «предложение» (`<option>`) должно содержать `value`.
+* [`disabled`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#disabled): да/нет. Если истинно, поле выбора станет неживым (замрёт) и будет выглядеть тусклым.
+* [`form`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#form): строка. Указывает имя (`id`) того бланка (`<form>`), к которому приписано это поле. Если не указать, поле припишется к ближайшему родителю-бланку.
+* [`multiple`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#multiple): да/нет. Если истинно, **Обозреватель** позволит выбрать [несколько имён сразу.](#enabling-multiple-selection)
+* [`name`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#name): строка. Указывает имя для поля, которое [отправляется вместе с бланком в хранимку.](#reading-the-select-box-value-when-submitting-a-form)
+* `onChange` (при перемене): дело для [обработки **События**](/reference/react-dom/components/common#event-handler). Оно необходимо для [подвластных полей выбора.](#controlling-a-select-box-with-a-state-variable) Срабатывает тотчас, как только гость выберет иной путь. Ведёт себя как [событие «ввода»](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/input_event) в обозревателе.
+* `onChangeCapture`: вид `onChange`, который срабатывает на [поре захвата события.](/learn/responding-to-events#capture-phase-events)
+* [`onInput`](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/input_event) (при вводе): дело для [обработки **События**](/reference/react-dom/components/common#event-handler). Срабатывает тотчас, как только гость меняет значение. По заведенному в **Расписывателе** (React) обычаю принято использовать вместо него `onChange`, который трудится точно так же.
+* `onInputCapture`: вид `onInput`, который срабатывает на [поре захвата события.](/learn/responding-to-events#capture-phase-events)
+* [`onInvalid`](https://developer.mozilla.org/ru/docs/Web/API/HTMLInputElement/invalid_event) (при неверности): дело для [обработки **События**](/reference/react-dom/components/common#event-handler). Срабатывает тогда, когда внесённые данные не прошли проверку (валидацию) при отправке бланка. В отличие от врождённого события обозревателя, в **Расписывателе** наказ `onInvalid` всплывает по дереву частей страницы.
+* `onInvalidCapture`: вид `onInvalid`, который срабатывает на [поре захвата события.](/learn/responding-to-events#capture-phase-events)
+* [`required`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#required) (обязательно): да/нет (булево). Если истинно (`true`), то без выбора значения бланк в **хранимку** не уйдёт.
+* [`size`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/select#size) (размер): число. При [множественном выборе](#enabling-multiple-selection) указывает, сколько имён будет явлено гостю сразу.
+
 
 #### Предостережения {/*caveats*/}
 
