@@ -4,7 +4,7 @@
 
 import {memo} from 'react';
 
-export const IconDownload = memo<JSX.IntrinsicElements['svg']>(
+export const IconDownload = memo<React.JSX.IntrinsicElements['svg']>(
   function IconDownload({className}) {
     return (
       <svg

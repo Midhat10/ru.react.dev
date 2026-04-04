@@ -5,7 +5,7 @@
 import {memo} from 'react';
 
 export const IconRocket = memo<
-  JSX.IntrinsicElements['svg'] & {title?: string; size?: 's' | 'md'}
+  React.JSX.IntrinsicElements['svg'] & {title?: string; size?: 's' | 'md'}
 >(function IconRocket({className, size = 'md'}) {
   return (
     <svg

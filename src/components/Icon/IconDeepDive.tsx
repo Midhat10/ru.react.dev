@@ -4,7 +4,7 @@
 
 import {memo} from 'react';
 
-export const IconDeepDive = memo<JSX.IntrinsicElements['svg']>(
+export const IconDeepDive = memo<React.JSX.IntrinsicElements['svg']>(
   function IconDeepDive({className}) {
     return (
       <svg

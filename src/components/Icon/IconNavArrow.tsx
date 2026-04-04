@@ -6,7 +6,7 @@ import {memo} from 'react';
 import cn from 'classnames';
 
 export const IconNavArrow = memo<
-  JSX.IntrinsicElements['svg'] & {
+  React.JSX.IntrinsicElements['svg'] & {
     /**
      * The direction the arrow should point.
      * `start` and `end` are relative to the current locale.

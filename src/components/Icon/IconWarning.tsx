@@ -4,7 +4,7 @@
 
 import {memo} from 'react';
 
-export const IconWarning = memo<JSX.IntrinsicElements['svg']>(
+export const IconWarning = memo<React.JSX.IntrinsicElements['svg']>(
   function IconWarning({className}) {
     return (
       <svg
