@@ -127,7 +127,7 @@ function ChatRoom({ roomId }) {
 
 * Отсчёт времени, управляемый через <CodeStep step={1}>[`setInterval()` (поставить промежуток)](https://developer.mozilla.org/ru/docs/Web/API/setInterval)</CodeStep> и <CodeStep step={2}>[`clearInterval()` (прекратить отсчёт)](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)</CodeStep>.
 * Подписка на событие, подвластная <CodeStep step={1}>[`window.addEventListener()` (слушать событие)](https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener)</CodeStep> и <CodeStep step={2}>[`window.removeEventListener()` (перестать слушать)](https://developer.mozilla.org/ru/docs/Web/API/EventTarget/removeEventListener)</CodeStep>.
-* Сторонняя книжница правил для оживления картинок (анимаций) с приёмами наподобие <CodeStep step={1}>`animation.start()` (запуск)</CodeStep> и <CodeStep step={2}>`animation.reset()` (сброс)</CodeStep.
+* Сторонняя книжница правил для оживления картинок (анимаций) с приёмами наподобие <CodeStep step={1}>`animation.start()` (запуск)</CodeStep> и <CodeStep step={2}>`animation.reset()` (сброс)</CodeStep>.
 
 **Если ты в своей части страницы не соединяешься с какой-либо внешней системой, то [скорее всего тебе и не нужно Воздействие.](/learn/you-might-not-need-an-effect)**
 
@@ -506,7 +506,7 @@ export default function Box() {
 
 ### Оборачивание эффекта в пользовательский хук {/*wrapping-effects-in-custom-hooks*/}
 
-Эффекты – это ["лазейка":](/learn/escape-hatches) они нужны, чтобы "выйти за рамки React", или когда для задачи нет встроенного решения. Если вам постоянно приходится писать собственные эффекты, то возможно ваши эффекты реализуют повторяющуюся логику, которую можно вынести в отдельный [пользовательский хук](/learn/reusing-logic-with-custom-hooks).
+Эффекты - это ["лазейка":](/learn/escape-hatches) они нужны, чтобы "выйти за рамки React", или когда для задачи нет встроенного решения. Если вам постоянно приходится писать собственные эффекты, то возможно ваши эффекты реализуют повторяющуюся логику, которую можно вынести в отдельный [пользовательский хук](/learn/reusing-logic-with-custom-hooks).
 
 Например, вот пользовательский хук `useChatRoom`, который "скрывает" логику эффекта за декларативным API:
 
